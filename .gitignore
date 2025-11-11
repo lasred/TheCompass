@@ -1,0 +1,21 @@
+# User workspace - keep work private
+/user-workspace/*
+!/user-workspace/.gitkeep
+
+# User configuration
+user-config.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
