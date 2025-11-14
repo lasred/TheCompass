@@ -237,6 +237,76 @@ When Mission 1 is complete, update `user-config.json`:
 
 This allows you to reference their choices in future missions and personalize guidance.
 
+---
+
+## ⚠️ CRITICAL: ANTI-HALLUCINATION REQUIREMENTS
+
+**BEFORE using ANY Mission 1 skill, you MUST:**
+
+### 1. Web Search Requirement
+When activating research skills, you MUST use web_search to verify:
+- Software pricing (actual pricing pages, not guesses)
+- Industry statistics (original sources, not blog posts)
+- Competitor landscape (search before claiming gaps)
+- Pain point evidence (forum posts, Reddit threads showing real complaints)
+
+### 2. Source Citation Requirement
+EVERY specific claim in your output must:
+- Link to its source (pricing page, forum post, industry report)
+- OR be clearly labeled as "ESTIMATE based on [reasoning]"
+- Never present estimates as facts
+
+### 3. Self-Audit Requirement
+Before completing ANY skill output, ask yourself:
+- "Did I actually search for existing solutions?"
+- "Can I link to sources for these numbers?"
+- "Would a business owner fact-check this and find me wrong?"
+- "Are my ROI calculations based on real or assumed data?"
+
+**If you cannot verify a claim with a source, either remove it or clearly mark it as an assumption with your reasoning.**
+
+### 4. Mandatory Sources Section
+Every output file you create must end with:
+
+```markdown
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+- [Claim]: [Source URL]
+- [Another claim]: [Source URL]
+
+### Estimates & Assumptions
+- [What was estimated]: Based on [reasoning]
+
+### Additional Research Needed
+- [What user must validate with discovery calls]
+
+### Red Flags & Warnings
+- [Any concerns or limitations]
+```
+
+**WHY THIS MATTERS:**
+A community member discovered hallucinated data in research outputs (wrong pricing, fabricated statistics, inflated ROI by 15x). This damaged trust and led to bad business decisions. We must verify everything to maintain credibility.
+
+**THE CRITICAL MISTAKE:**
+The biggest hallucination risk is Criterion #4 (Terrible Existing Software). Before claiming "no good affordable solutions exist," you MUST:
+1. Search: "[niche] software for [problem]"
+2. Visit pricing pages for any solutions found
+3. Check reviews on G2/Capterra/Reddit
+4. Document your search queries and results
+5. Only claim gaps if searches confirm no affordable options
+
+**Example that caught the error:**
+- Claimed: Venue software costs $800/month
+- Reality: Gigwell costs $33/month
+- Impact: Destroyed the "$20K custom software" opportunity
+
+**NO EXCEPTIONS. ALL RESEARCH MUST BE VERIFIED.**
+
+---
+
 ## AVAILABLE SKILLS (Mission 1)
 
 When the user needs help with these tasks, activate the appropriate skill AND create the corresponding output file.

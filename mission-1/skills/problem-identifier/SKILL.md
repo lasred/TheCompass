@@ -1,13 +1,65 @@
+---
+name: problem-identifier
+description: Evaluate potential business problems against the Boring Problems Framework to determine if they're worth solving ($20K+ annual value). NOW WITH MANDATORY FACT-CHECKING.
+---
+
 # Problem Identifier Skill
 
 ## Purpose
-Evaluate potential business problems against the Boring Problems Framework to determine if they're worth solving ($20K+ annual value).
+Evaluate potential business problems against the 4 Boring Problems Framework criteria to determine if they're worth solving ($20K+ annual value).
+
+## ⚠️ MANDATORY VERIFICATION PROTOCOL
+
+**BEFORE completing ANY problem evaluation, you MUST:**
+
+### 1. Verify Criterion #4 (Terrible Existing Software)
+**CRITICAL - THIS IS WHERE HALLUCINATIONS HAPPEN MOST:**
+- ✅ Search: "[niche] software for [problem]"
+- ✅ Search: "[niche] [specific task] software"
+- ✅ Visit pricing pages for solutions found
+- ✅ Check reviews on G2/Capterra/Reddit
+- ✅ Link to all competitors found
+- ❌ DO NOT claim "no solutions" without searching
+- ❌ DO NOT claim "$800/month" without pricing page link
+- ❌ DO NOT skip this step - it's critical
+
+### 2. Verify Frequency Data
+- ✅ Search for industry data on task frequency
+- ✅ Find forum posts mentioning frequency
+- ✅ Look for job postings describing volume
+- ✅ Clearly label if estimating
+- ❌ DO NOT make up frequency numbers
+
+### 3. Verify Compliance Claims
+- ✅ Search for official regulation sources
+- ✅ Link to government sites if claiming compliance
+- ✅ Verify fines/penalties with official sources
+- ❌ DO NOT claim regulations without verifying
+
+### 4. Verify Value Calculation
+- ✅ Show ALL math
+- ✅ Cite sources for hourly costs
+- ✅ Label if estimating time saved
+- ❌ DO NOT present estimates as facts
+
+### 5. Self-Audit Before Completion
+Ask yourself:
+- "Did I actually search for existing solutions?"
+- "Can I link to competitor pricing pages?"
+- "Are my frequency estimates based on data?"
+- "Would this evaluation survive fact-checking?"
+
+**If you cannot verify a claim, either remove it or clearly mark it as an assumption.**
+
+---
 
 ## When to Use This Skill
 - User found a potential problem through research
 - User needs to evaluate if a problem meets the 4 criteria
 - User wants to calculate the financial value of solving a problem
 - User is deciding between multiple problems
+
+---
 
 ## The 4 Criteria Framework
 
@@ -23,6 +75,8 @@ The business is doing this task manually using:
 
 **Good signs:** "We spend X hours on this," "It's all manual," "We use spreadsheets"
 
+**Verification:** Find forum posts or reviews showing manual process
+
 ### 2. High-Frequency Repetition
 They do this task frequently:
 - 10+ times per month (minimum)
@@ -31,6 +85,8 @@ They do this task frequently:
 
 **Good signs:** "Every inspection," "Every service call," "Every client"
 
+**Verification:** Find industry data, job postings, or forum posts mentioning frequency. If estimating, explain reasoning clearly.
+
 ### 3. Compliance or Revenue-Critical
 The task is either:
 - **Compliance-critical:** Government required, regulatory necessity, legal obligation
@@ -38,93 +94,84 @@ The task is either:
 
 **Good signs:** "We can't bill without this," "Required by state," "We'll get fined"
 
+**Verification:** Link to official regulation sources. Link to forum posts about revenue impact.
+
 ### 4. Terrible Existing Software
 Current software options are:
 - Non-existent (they built spreadsheets)
-- Too expensive ($500+/user/month)
+- Too expensive ($500+/user/month for small businesses)
 - Too generic (doesn't fit their workflow)
 - Outdated (built in 2008, crashes, slow)
 - Too complex (takes months to learn)
 
 **Good signs:** "We tried X but it didn't work," "Too expensive," "Doesn't do what we need"
 
+**CRITICAL VERIFICATION:**
+- Search for existing solutions
+- Visit pricing pages
+- Check reviews
+- Document what you found
+- Only claim gaps if searches confirm it
+
+---
+
 ## Evaluation Process
 
-When a user presents a problem, follow this process:
-
 ### Step 1: Get Problem Details
-Ask clarifying questions:
-- "Describe the problem in detail. What are they currently doing?"
-- "How often do they do this task?"
-- "How much time does it take each time?"
-- "Why is this important to their business?"
-- "What software have they tried? Why didn't it work?"
+Ask clarifying questions to understand the problem fully.
 
 ### Step 2: Evaluate Each Criterion
-Go through each criterion one by one:
 
-**Manual Process Hell:**
-- Is it manual? (Yes/No)
-- What are they using? (paper, spreadsheets, etc.)
-- Explain your reasoning
+For each criterion, provide:
+- **Status:** ✅ YES or ❌ NO
+- **Evidence:** Links to sources or clear label as estimate
+- **Assessment:** Why it meets/doesn't meet criterion
 
-**High-Frequency Repetition:**
-- How often? (X times per month/week/day)
-- Does it meet the threshold? (10+ per month minimum)
-- Explain your reasoning
+### Step 3: Calculate Value (SHOW ALL MATH)
 
-**Compliance or Revenue-Critical:**
-- Is it required by government/regulation? (Yes/No)
-- Does it directly affect billing/revenue? (Yes/No)
-- Explain your reasoning
+**Formula:** Time Saved × Frequency × Hourly Cost = Monthly Value
 
-**Terrible Existing Software:**
-- What's available now?
-- Why doesn't it work for them?
-- Explain your reasoning
+**Example:**
+```
+Time saved per instance: 3.5 hours
+Frequency: 20 times/month
+Hourly cost: $50/hour (SOURCE: BLS data for [occupation])
 
-### Step 3: Calculate Value
+Monthly value = 3.5 × 20 × $50 = $3,500/month
+Annual value = $3,500 × 12 = $42,000/year
 
-Use this formula:
+Suggested pricing: $10K upfront + $1,500/month
+```
 
-**Time Saved × Frequency × Hourly Cost = Monthly Value**
-
-**Example calculation:**
-- Task currently takes: 4 hours
-- They do it: 20 times per month
-- Their time costs: $50/hour (employee or owner)
-- **Monthly value:** 4 × 20 × $50 = $4,000/month
-- **Annual value:** $4,000 × 12 = $48,000/year
-
-**Pricing rule:** Charge 20-30% of annual value
-- In this example: $10K-$15K upfront + $1,000-$1,500/month
+**Verification requirements:**
+- Cite source for hourly cost
+- Cite source or explain estimate for time saved
+- Cite source or explain estimate for frequency
 
 ### Step 4: Make Recommendation
 
-Based on evaluation:
-
 **WORTH PURSUING if:**
-- ✅ Meets all 4 criteria
-- ✅ Annual value is $20,000+ 
-- ✅ You can realistically build it with Claude Code
+- ✅ Meets all 4 criteria (with verified evidence)
+- ✅ Annual value is $20,000+
+- ✅ You can realistically build it
 - ✅ Decision maker is accessible
 
 **NOT WORTH PURSUING if:**
-- ❌ Fails any of the 4 criteria
-- ❌ Annual value is under $20,000
-- ❌ Too complex to build (enterprise-level features)
-- ❌ Too niche (only 10 potential clients exist)
+- ❌ Fails any criterion
+- ❌ Affordable solutions exist ($33-$100/month)
+- ❌ Annual value under $20K
+- ❌ Too complex to build
+
+---
 
 ## Output Format
-
-Always structure your evaluation like this:
 
 ```
 # Problem Evaluation
 
 **Problem:** [Brief description]
 **Industry:** [Industry/niche]
-**Business type:** [Size/type of business]
+**Business type:** [Size/type]
 
 ---
 
@@ -132,41 +179,52 @@ Always structure your evaluation like this:
 
 ### ✅/❌ Criterion 1: Manual Process Hell
 **Status:** [Yes/No]
-**Details:** [What they're doing manually]
-**Assessment:** [Why this meets/doesn't meet the criterion]
+**Evidence:** [Link to forum post] OR [Marked as ASSUMPTION - needs validation]
+**Assessment:** [Why this meets/doesn't meet]
 
 ### ✅/❌ Criterion 2: High-Frequency Repetition
 **Status:** [Yes/No]
-**Frequency:** [X times per month/week/day]
-**Assessment:** [Why this meets/doesn't meet the criterion]
+**Frequency:** [X times per month]
+**Source:** [Industry report URL] OR [ESTIMATE based on reasoning]
+**Assessment:** [Why this meets/doesn't meet]
 
 ### ✅/❌ Criterion 3: Compliance or Revenue-Critical
 **Status:** [Yes/No]
-**Type:** [Compliance / Revenue / Both / Neither]
-**Assessment:** [Why this meets/doesn't meet the criterion]
+**Type:** [Compliance / Revenue / Both]
+**Evidence:** [Official regulation URL] OR [Forum posts about revenue impact]
+**Assessment:** [Why this meets/doesn't meet]
 
 ### ✅/❌ Criterion 4: Terrible Existing Software
 **Status:** [Yes/No]
-**Current options:** [What exists and why it fails]
-**Assessment:** [Why this meets/doesn't meet the criterion]
+**Search performed:** "[exact search query]" on [date]
+**Competitors found:**
+- [Tool name]: $X/month ([pricing page URL]) - Issues: [from reviews]
+- [Tool name]: $Y/month ([pricing page URL]) - Issues: [from reviews]
+**Gap confirmed:** [What's missing] OR [Affordable solution exists - NOT WORTH PURSUING]
+**Assessment:** [Why this meets/doesn't meet]
 
 ---
 
 ## Value Calculation
 
-**Time per instance:** [X hours]
-**Frequency:** [X times per month]
-**Hourly cost:** $[X]
+**Time per instance:** [X hours] (SOURCE: [cite] OR ESTIMATE: [reasoning])
+**Frequency:** [X per month] (SOURCE: [cite] OR ESTIMATE: [reasoning])
+**Hourly cost:** $[X] (SOURCE: [BLS or industry data])
 
-**Monthly value:** $[calculation]
+**Calculation:**
+[Show the math line by line]
+
+**Monthly value:** $[result]
 **Annual value:** $[monthly × 12]
 
 **Suggested pricing:**
 - Upfront: $[10K-20K range]
 - Monthly: $[1K-2K range]
 
-**ROI for client:** 
-[Show how much they save vs what they pay]
+**ROI for client:**
+Year 1 cost: $[total]
+Year 1 savings: $[annual value]
+Net benefit: $[difference]
 
 ---
 
@@ -177,52 +235,65 @@ Always structure your evaluation like this:
 **Reasoning:** [Explain why]
 
 **Next steps:** [What they should do]
-- If pursuing: "Validate this with 2-3 discovery calls. Confirm businesses will actually pay for this."
-- If not pursuing: "Find a different problem. This one doesn't meet the criteria."
 
 ---
 
-**Remember:** Post this evaluation in Basecamp and get feedback from Zane and other pioneers before committing to this problem.
+## 📋 SOURCES & VERIFICATION
+
+### Verified Facts
+**Criterion evaluations:**
+- [Criterion]: [Source URL or ESTIMATE with reasoning]
+
+**Value calculation:**
+- Hourly cost: [Source URL]
+- Frequency: [Source URL or ESTIMATE]
+- Time savings: [Source URL or ESTIMATE]
+
+**Competitor research:**
+- Search: "[query]" - Found [X competitors]
+- [Competitor]: [Pricing page URL]
+
+### Estimates & Assumptions
+- [Item]: Estimated based on [reasoning]
+
+### Additional Research Needed
+- [What user must validate with discovery calls]
+
+### Red Flags
+- [Any concerns]
 ```
+
+---
+
+## ⚠️ ANTI-HALLUCINATION CHECKLIST
+
+Before completing evaluation, verify:
+- [ ] Searched for existing solutions
+- [ ] All competitor pricing has URLs
+- [ ] Compliance claims cite official sources
+- [ ] Frequency data sourced or clearly estimated
+- [ ] Value calculation shows all math
+- [ ] Hourly costs cited or explained
+- [ ] Estimates clearly labeled
+- [ ] Sources section complete
+- [ ] No fabricated data
+
+**If you cannot check all boxes, DO NOT complete. Do more research or flag what's missing.**
+
+---
 
 ## Key Reminders
 
-**Be honest in your assessment:**
-- Don't force a "yes" if criteria aren't clearly met
-- It's better to reject a weak problem now than waste weeks building something nobody wants
-- The 4 criteria exist for a reason - all 4 must be met
+**Criterion #4 is critical:**
+- If affordable solutions exist, problem fails
+- Must actually search before claiming gaps
+- $33/month competitor kills $15K custom software
 
-**Push them to validate:**
-- Even if a problem looks good, they need to talk to real businesses
-- Encourage them to post in Basecamp for feedback
-- Remind them: "This looks promising, but validate it with discovery calls"
+**Be honest:**
+- Better to reject weak problems now
+- Than waste weeks building wrong solution
+- All 4 criteria must be met
 
-**Keep them focused:**
-- One great problem is better than three mediocre ones
-- Quality over quantity
-- Better to spend extra time finding the RIGHT problem
-
-## Common Pitfalls to Watch For
-
-**False positives:**
-- Problem seems big but isn't actually costing them money
-- They "want" a solution but won't pay for it
-- Frequency is lower than claimed
-- Existing software is "good enough" even if they complain
-
-**Red flags:**
-- "This would be nice to have" (not must-have)
-- "Sometimes we do this" (not high-frequency)
-- "We've been living with it" (not painful enough)
-- "Our boss won't pay for software" (no budget)
-
-## Success Criteria
-
-A problem is validated when:
-1. ✅ All 4 criteria clearly met
-2. ✅ Annual value $20K+
-3. ✅ Realistic to build
-4. ✅ Multiple businesses have this problem (not just one)
-5. ✅ Decision makers are accessible
-
-**When all 5 are true:** This is gold. Help them move forward.
+**Validate everything:**
+- Research shows IF problem is worth solving
+- Discovery calls show WHETHER businesses will pay
