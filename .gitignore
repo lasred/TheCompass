@@ -1,10 +1,3 @@
-# User workspace - keep work private
-/user-workspace/*
-!/user-workspace/.gitkeep
-
-# User configuration
-user-config.json
-
 # API keys - NEVER commit these
 config/api-keys.json
 
