@@ -352,47 +352,89 @@ Based on the niche research in `accounting-niche-research.md`, here are **5 spec
 
 ---
 
-## Which Opportunity Should You Choose, Chris?
+## 🎯 UPDATED RECOMMENDATIONS (Based on Friend Feedback)
 
-### ⭐ TOP RECOMMENDATION: Document Collection (#1)
+**CRITICAL:** These recommendations have been updated based on direct feedback from your accounting firm owner friend. His feedback trumps desktop research.
 
-**Why this is your best bet:**
-1. ✅ **Identified as #1 pain in 2024 research** - Not your opinion, it's data
-2. ✅ **Universal problem** - Every firm, every size, every geography
-3. ✅ **High frequency** - Happens every engagement (monthly, quarterly, annually)
-4. ✅ **Clear ROI** - Easy to calculate time saved
-5. ✅ **Fast to validate** - Build for your friend, test for 2 weeks, get feedback
-6. ✅ **Medium build complexity** - Doable, not crazy ambitious
-7. ✅ **Low competition** - No accounting-specific solution under $100/month with SMS + email + no password
+### ⭐ TOP PRIORITY: Tax Season Capacity Planning (#4)
 
-### How to Validate with Your Friend:
-1. **Interview them:** "Show me your document collection process. Where does it break?"
-2. **Calculate their pain:** "How many hours/month do you spend chasing docs?"
-3. **Build MVP:** Simple web app—send checklist, client uploads, you see progress
-4. **Test for 2 weeks:** Use it for 5 clients
-5. **Measure results:** "Did it save you time? Would you pay $99/month for this?"
-6. **Get intro:** "Who else has this problem? Can you intro me?"
+**Friend's feedback:** "Friend likes this. Something there would sell for sure. My friend definitely emphasizes the pain of the tax season. If there are ways to fix tax season (heavily affects him and other accountants). If you can show how it saves time during tax season, this would sell big time."
 
-### 🥈 SECOND CHOICE: Workflow Visibility (#2)
+**Why friend prioritized this:**
+1. ✅ **Tax season pain is INTENSE for him** - Personal, acute suffering
+2. ✅ **"Would sell for sure"** - Strongest validation he gave
+3. ✅ **"If you can show how it saves time during tax season, this would sell big time"** - He's telling you the market is ready
+4. ✅ **Low competition** - Almost zero tax-season-specific tools
+5. ✅ **Clear differentiation** - Seasonal pricing model ($299-499 for Jan-Apr)
 
-**Why this works:**
-- Slightly more complex to build (multi-user, real-time dashboard)
-- Higher price point ($149-$299/month) = more revenue per client
-- Targets 2-20 person firms (bigger than solo firms)
-- 55.5% of firms have workflow inefficiencies = massive market
+**Challenges:**
+- ⚠️ Seasonal (Jan-Apr peak), but friend says it's worth it
+- ⚠️ Pricing model needs validation (seasonal vs year-round)
 
-**When to choose this:**
-- If your friend's firm has 3+ employees
-- If you're comfortable building dashboards
-- If you want higher contract value
+### 🥈 SECOND PRIORITY: Document Collection (#1)
 
-### ❌ DON'T START WITH:
+**Friend's feedback:** "He did say #1 and #9 are good ones."
 
-**Time & Billing (#3):** Too much competition (QuickBooks, TimeSolv, etc.)
+**Why this is still strong:**
+1. ✅ **Friend validated it** - "Good one"
+2. ✅ **Year-round problem** (better for recurring revenue)
+3. ✅ **Universal across all firms**
+4. ⚠️ **BUT:** Competition exists (ContentSnare $35/month) - need to verify gap
 
-**Tax Capacity Planning (#4):** Seasonal problem (only acute Jan-Apr), harder to sell year-round
+**Note:** While research said this is #1 pain, friend emphasized Tax Season more. Trust the friend's lived experience.
 
-**Recurring Automation (#5):** Good problem but less urgent than #1 and #2
+### ⚠️ MAYBE: Client Cash Flow Support (#9)
+
+**Friend's feedback:** "My friend likes ### 9. **Client Cash Flow Support** 💀 too so we should have an opportunity for this - he thinks it can be sold if it can be done correctly. This could be more generalized too - SAAS for normal everyday people. (Difficulty in marketing)"
+
+**Why friend is lukewarm:**
+- ⚠️ "If it can be done correctly" = uncertainty
+- ⚠️ "Difficulty in marketing" = he sees challenges
+- ⚠️ Crowded market (Float, Pulse, QuickBooks Cash Flow Planner)
+
+**Verdict:** Skip this for now. Focus on Tax Season and Document Collection.
+
+### ❌ DON'T PURSUE (Per Friend Feedback):
+
+**Workflow Visibility (#2):** "Needed but so many tech companies already solving for this"
+
+**Time & Billing (#3):** "Similar reasoning - so many people doing this"
+
+**Recurring Automation (#5):** "Already really good apps for this"
+
+**Friend is right** - these markets are crowded. Focus where you have an edge.
+
+---
+
+## Revised Priority Order (Friend-Validated)
+
+| Priority | Opportunity | Friend's Quote | Competition | Your Action |
+|----------|-------------|----------------|-------------|-------------|
+| **#1** | Tax Season Capacity | "Would sell for sure... would sell big time" | Low | ✅ BUILD THIS |
+| **#2** | Document Collection | "Good one" | Medium (ContentSnare $35) | ✅ Validate gap first |
+| **#3** | Client Cash Flow | "If done correctly (difficulty in marketing)" | High | ⚠️ Skip for now |
+| **❌** | Workflow Visibility | "So many tech companies solving this" | High | ❌ Don't build |
+| **❌** | Time & Billing | "So many people doing this" | High | ❌ Don't build |
+| **❌** | Recurring Automation | "Already really good apps" | High | ❌ Don't build |
+
+---
+
+## What Changed from Original Research?
+
+**Original recommendation:** Document Collection (#1)
+**Friend's feedback:** Tax Season (#4) "would sell big time"
+
+**Why the shift?**
+- Desktop research said Document Collection is #1 pain
+- But friend's LIVED EXPERIENCE says Tax Season is most acute
+- Friend gave strongest validation ("would sell for sure") to Tax Season
+- ContentSnare exists at $35/month (cheaper than your proposed pricing)
+
+**Lesson:** Trust the person experiencing the pain over survey data.
+
+---
+
+## Next Steps (Updated)
 
 ---
 
