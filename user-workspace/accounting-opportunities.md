@@ -413,3 +413,135 @@ Based on the niche research in `accounting-niche-research.md`, here are **5 spec
 ---
 
 **Great progress, Chris. You now have 5 validated opportunities. Time to evaluate which one is worth building.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+
+**Pricing Data (from previous verification):**
+- **ContentSnare**: ✅ VERIFIED - $35-$215+/month (https://contentsnare.com/pricing/)
+- **Karbon**: ✅ VERIFIED - $79-99/user/month (https://karbonhq.com/pricing/)
+- **Jetpack Workflow**: ✅ VERIFIED - $30-50/user/month (https://jetpackworkflow.com/pricing/)
+- **TaxDome**: ✅ VERIFIED - $75-83/user/month (https://taxdome.com/pricing)
+- **Financial Cents**: ✅ VERIFIED - Solo $9/month, Team $39/user/month, Scale $69/user/month (https://financial-cents.com/pricing/)
+
+**Pain Point Data:**
+- **Document collection = #2 challenge**: ✅ VERIFIED - Financial Cents 2023 survey of 132 firm owners
+- **55.5% workflow inefficiencies**: ✅ VERIFIED - 2025 State of Accounting Workflow Report (816 respondents)
+- **Workflow = top challenge**: ✅ VERIFIED - 63% in 2023/2024 surveys
+
+### Estimates & Assumptions
+
+**ALL ROI Calculations Are Estimates:**
+- **$200/hour billing rate**: ASSUMPTION - May be significantly lower for small/solo firms; validate with discovery calls
+- **Time savings estimates** (10-20 hours/month, 12.5 hours, etc.): ESTIMATES - Based on hypothetical scenarios, NOT verified with actual firms
+- **Annual value calculations** ($10K-$40K): ESTIMATES - Derived from unverified time savings × assumed billing rates
+- **Revenue numbers** (Solo $62K, 2-5 employees $292K): ESTIMATES - Need verification from AICPA or industry reports
+- **Client retention lifetime value** ($5K-$50K): ESTIMATE - Highly variable, needs validation
+- **Write-off rates** (10-20% unbilled hours): ESTIMATE - Industry averages, need firm-specific data
+
+**Pricing Recommendations:**
+- **All suggested pricing** ($79-$299/month): ESTIMATES - Not validated with target customers
+- **No willingness-to-pay research conducted** - These are assumptions based on competitor pricing
+
+**Competition Level Ratings:**
+- **"Medium" or "Low" competition**: SUBJECTIVE ASSESSMENT - Based on limited research, not comprehensive competitor analysis
+- **Feature gap claims**: ASSUMPTIONS - Haven't tested all competitor products to verify gaps
+
+### Critical Issues Discovered
+
+⚠️ **MAJOR PROBLEM: Financial Cents Already Fills The "Gap"**
+
+The document recommends building solutions priced at $79-$299/month because existing tools are "too expensive." However:
+
+- **Financial Cents offers practice management for $9/month (solo) and $39/month (team)**
+- This is CHEAPER than all recommended pricing in this document
+- This contradicts the core premise that there's a pricing gap
+
+**Questions that MUST be answered before building:**
+1. Why aren't firms using Financial Cents at $9-39/month?
+2. What features does it lack that they need?
+3. Would firms actually pay MORE for a different solution?
+4. Is the problem really price, or is it features/usability?
+
+⚠️ **Opportunity #1 (Document Collection) - Competition Stronger Than Claimed**
+
+The document says ContentSnare is $89-179/month, but actual pricing shows **$35/month** starting price. This is much more affordable than stated. The "gap" for affordable document collection may not exist.
+
+⚠️ **All "Annual Value" Calculations Are Hypothetical**
+
+Examples of unverified claims:
+- "Firm with 50 clients... $30,000/year in recoverable time" - NOT VERIFIED
+- "Prevent one missed deadline = $500-$5,000" - ASSUMPTION
+- "Recapture 50% of write-offs = $37,500/year" - HYPOTHETICAL
+
+These numbers are used to justify pricing but have NO empirical basis.
+
+### Additional Research Needed
+
+**Before pursuing ANY of these opportunities:**
+
+1. **Conduct 10-15 discovery calls** with firms in each category to validate:
+   - Do they actually spend the estimated time on these tasks?
+   - What's their real billing rate? (likely lower than $200/hour for small firms)
+   - What tools do they currently use?
+   - Why haven't they adopted existing affordable solutions (Financial Cents, etc.)?
+   - What would they actually pay for a solution?
+
+2. **Test competitor products**:
+   - Sign up for Financial Cents ($9/month) - what does it do well? What's missing?
+   - Try ContentSnare free trial - does it solve document collection?
+   - Test Jetpack Workflow - why do some firms love it and others hate it?
+
+3. **Search for existing solutions more thoroughly**:
+   - "accounting document collection automation"
+   - "tax season capacity planning software"
+   - "recurring bookkeeping workflow software"
+   - Check G2, Capterra for reviews showing unmet needs
+
+4. **Validate the "gaps"**:
+   - Is there really no "affordable all-in-one under $100/month"? (Financial Cents is $9-39/month)
+   - Is there really no good document collection under $100? (ContentSnare starts at $35)
+   - Are these real gaps or feature/usability issues with existing tools?
+
+5. **Get verbal commitments**:
+   - "If I built [specific solution] for $[price], would you buy it?"
+   - "What would it need to have for you to switch from [current tool]?"
+   - "How much do you currently spend on software? What's your budget?"
+
+### Red Flags & Warnings
+
+🚨 **This document has NOT been validated with real customers**
+
+Every opportunity, every pricing recommendation, every ROI calculation is based on:
+- Desktop research
+- Assumptions about time spent
+- Assumptions about billing rates
+- Assumptions about willingness to pay
+- Incomplete competitor analysis
+
+🚨 **The "Top Recommendation" may be wrong**
+
+The document confidently recommends Document Collection (#1) as the best opportunity, but:
+- Haven't tested ContentSnare ($35/month) to see what it's missing
+- Haven't asked firms why they don't use existing solutions
+- Haven't validated that firms would pay $99-199/month for this
+
+🚨 **Pricing assumptions may be too high**
+
+- Solo firms averaging $62K revenue (if true) cannot afford $99-199/month software
+- That's $1,200-$2,400/year = 2-4% of their gross revenue
+- Typical software spend is 1-2% of revenue for small businesses
+
+🚨 **Before building anything:**
+1. Talk to 10+ actual accounting firm owners
+2. Ask them to walk you through their current process
+3. Find out what they currently pay for software
+4. Get them to commit: "Would you pay $X for Y?"
+5. Test the top 3 competitor products yourself
+
+**This is NOT validated market research. This is a hypothesis that needs testing.**
+
+**Sources last verified:** November 2025

@@ -457,3 +457,57 @@ Friend in the industry can validate, test, and refer.
 ---
 
 **You now have a crystal-clear target, Chris. Go validate this with your friend and 2-3 other firms. If they confirm this avatar, you're ready to build.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+None - This is a hypothetical customer avatar based on research assumptions
+
+### Estimates & Assumptions
+**ALL details in this avatar are UNVERIFIED:**
+- Company revenue ($250K-$750K)
+- Software budget ($2,000-$5,000/year)
+- Time spent chasing documents (8-15 hours/month)
+- Number of clients (30-80)
+- Pain point severity ratings
+- Willingness to pay ($99-149/month)
+
+**This avatar was created from desktop research, NOT from interviewing actual prospects**
+
+### Additional Research Needed
+**Before using this avatar to build or sell:**
+
+1. **Interview 10+ accounting firm owners** matching this profile:
+   - Validate revenue ranges
+   - Confirm actual software budgets
+   - Measure real time spent on document collection
+   - Test pricing assumptions
+
+2. **Verify decision-making process**:
+   - Is owner really the decision maker?
+   - What's the actual buying process?
+   - Who else needs to approve software purchases?
+
+3. **Test messaging**:
+   - Do these pain points resonate?
+   - Is the language correct?
+   - What objections actually come up?
+
+### Red Flags & Warnings
+⚠️ **This is a hypothesis, not a validated avatar**
+
+Do NOT use this to:
+- Set final pricing
+- Write marketing copy
+- Make build decisions
+
+**DO use this to:**
+- Guide discovery call questions
+- Identify firms to interview
+- Frame initial outreach
+
+**Validate every assumption with real conversations before building.**
+
+**Sources last verified:** November 2025

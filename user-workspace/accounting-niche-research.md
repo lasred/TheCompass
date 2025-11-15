@@ -820,3 +820,104 @@ Start with **Document Collection System** (Solution #1). It's:
 ---
 
 **Well done, Chris. You're building something real.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+
+**Market Size:**
+- **$145.2B industry (2024)**: ✅ VERIFIED - IBISWorld reports US accounting services industry at $145.2bn in 2024 (https://www.ibisworld.com/industry-statistics/market-size/accounting-services-united-states/)
+
+**CPA Exam & Labor Shortage:**
+- **CPA exam takers dropped**: ✅ VERIFIED - First-time CPA exam candidates dropped from 48,004 in 2016 to 32,188 in 2021, a 33% decline (CPA Practice Advisor, AICPA reports)
+- **300,000+ accountants quit**: ✅ VERIFIED - Bureau of Labor Statistics data shows 300,000+ accountants and auditors quit in recent two-year period, 17% workforce drop
+
+**Workflow Challenges:**
+- **55.5% experience workflow inefficiencies**: ✅ VERIFIED - 2025 State of Accounting Workflow and Automation Report by Financial Cents (816 respondents) (https://financial-cents.com/resources/articles/2025-report-state-of-accounting-workflow-and-automation/)
+- **63% cite workflow as major issue**: ✅ VERIFIED - 2024 surveys show workflow remains top challenge (https://www.theaccountant-online.com/news/report-says-workflow-remains-top-challenge-for-accounting-firms/)
+- **Document collection = #2 challenge**: ✅ VERIFIED - 2023 Financial Cents survey of 132 firm owners: "chasing clients for additional documents was the second most challenging part of leading an accounting team"
+
+**Software Pricing (Verified from official sources):**
+- **Karbon**: ✅ VERIFIED - Business plan $79/user/month (annual) or $99/month (monthly billing) (https://karbonhq.com/pricing/)
+- **TaxDome**: ✅ VERIFIED - Pro plan $83/user/month (1-year contract), $79/month (2-year), $75/month (3-year) (https://taxdome.com/pricing)
+- **Jetpack Workflow**: ✅ VERIFIED - $30-39/user/month (annual) or $45-50/month (monthly) (https://jetpackworkflow.com/pricing/)
+- **ContentSnare**: ✅ VERIFIED - $35-$215+/month depending on plan (https://contentsnare.com/pricing/)
+- **Financial Cents**: ✅ VERIFIED - Solo $9/month, Team $39/user/month, Scale $69/user/month annual (https://financial-cents.com/pricing/)
+
+**Community Sizes:**
+- **r/Accounting**: ✅ VERIFIED - Approximately 1.2 million members (per GummySearch 2025 data)
+
+### Estimates & Assumptions
+
+**Requires Further Verification:**
+- **~88,000 firms**: ESTIMATE - Needs verification from US Census Bureau or IRS business data
+- **Growth rate (11.4% annually)**: ESTIMATE - Cited in research but needs primary source verification
+- **Revenue breakdowns by firm size** (Solo $62K, 2-5 employees $292K, etc.): ESTIMATE - Industry benchmarks, needs AICPA or CPA.com verification
+- **Profit margins (20-40%)**: ESTIMATE - General industry knowledge, needs firm-specific verification
+- **74% struggle to fill positions**: ESTIMATE - Cited in multiple sources but needs primary survey source
+- **82% raising wages by 9.8%**: ESTIMATE - Needs verification from industry wage surveys
+
+**ROI Calculations:**
+- **$200/hour billing rate**: ASSUMPTION - May vary significantly by firm size and location; validate with discovery calls
+- **10-20 hours/month chasing documents**: ESTIMATE - Based on general patterns, must validate with real firms
+- **Time savings calculations**: ESTIMATES - All time-to-money calculations are based on assumed rates and need validation
+
+**Community & Event Details:**
+- **AccountantForums.com (20,000+ members)**: Can be verified by visiting site
+- **WorkflowCon 2025**: Dates and details should be verified at event website
+- **Conference names**: All conference details need verification from official event pages
+
+### Additional Research Needed
+
+**Critical Verifications Before Building:**
+1. **Conduct 10+ discovery calls** with target accounting firms to validate:
+   - Actual time spent on document collection
+   - Real billing rates (may be lower than $200/hour for small firms)
+   - Current tools used and what they pay
+   - Specific pain points and willingness to pay
+
+2. **Verify competitive landscape**:
+   - Search "accounting document collection software" thoroughly
+   - Test competitor products to understand feature gaps
+   - Check recent G2/Capterra reviews for unmet needs
+
+3. **Validate pricing assumptions**:
+   - What do firms actually pay for current solutions?
+   - What's their total software budget?
+   - What price point triggers "too expensive" response?
+
+4. **Confirm pain point severity**:
+   - Is document collection truly #1 or #2 pain?
+   - How many firms actively seeking solutions vs. tolerating problem?
+   - What workarounds currently exist?
+
+### Red Flags & Warnings
+
+⚠️ **CRITICAL VERIFICATIONS NEEDED:**
+
+1. **Software Pricing Verified BUT** - The "gap" analysis (affordable all-in-one, document collection under $100/month) is based on feature comparison assumptions that need validation through product testing and customer interviews
+
+2. **Market Size Verified BUT** - $145B includes large firms (Big 4, etc.). Need to calculate TAM for small firms specifically (under $10M revenue)
+
+3. **Pain Points Referenced BUT** - While surveys confirm workflow and document collection are challenges, the RANKING and SEVERITY need validation through direct customer conversations
+
+4. **ROI Claims Are Estimates** - All calculations showing "$30K/year value" or "$2,500/month savings" are based on:
+   - Assumed billing rates ($200/hour may be high for small firms)
+   - Estimated time savings (10-20 hours/month needs validation)
+   - Theoretical utilization improvements
+
+5. **Competition May Be Stronger Than Assumed** - Just because Karbon is $79-89/month doesn't mean there's a market for cheaper alternatives. Must verify:
+   - Why aren't firms using Financial Cents at $9-39/month?
+   - What features do they consider essential vs. nice-to-have?
+   - Would they actually switch for price alone?
+
+⚠️ **Before building any solution, you MUST:**
+- Complete 10 discovery calls minimum
+- Test all competitor products mentioned
+- Validate that target firms have budget and authority to buy
+- Confirm they're actively seeking solutions (not just complaining)
+- Get verbal commitment: "If you built X for $Y, would you buy it?"
+
+**Sources last verified:** November 2025
