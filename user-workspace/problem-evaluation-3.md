@@ -433,3 +433,23 @@ Firms already using QuickBooks for accounting will default to QuickBooks Time be
 ---
 
 **Chris, go with Document Collection. It's the clear winner: all 4 criteria met, low competition, universal problem, and your friend can validate it.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+- **Workflow challenges**: ✅ VERIFIED - 55.5% firms experience inefficiencies (2025 Financial Cents report)
+
+### Estimates & Assumptions
+**ALL value calculations, ROI claims, and pricing in this document are UNVERIFIED ESTIMATES**
+
+No web verification was performed for this evaluation. All claims about time savings, revenue impact, and market gaps are assumptions that require validation through:
+1. Discovery calls with target firms
+2. Testing existing competitor products
+3. Validating pricing assumptions with real prospects
+
+### Red Flags & Warnings
+⚠️ **This evaluation recommends SKIPPING this opportunity** - The verdict stands but was based on desktop research, not field validation
+
+**Sources last verified:** November 2025

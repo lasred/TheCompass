@@ -398,3 +398,153 @@ But based on the research, this is unlikely. The pain is well-documented and acu
 ---
 
 **This is a winner, Chris. Now validate it with real conversations before you code.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+
+**Pain Point Data:**
+- **Document collection = #2 challenge**: ✅ VERIFIED - Financial Cents 2023 survey of 132 firm owners
+- **#1 workflow issue in 2024**: ✅ VERIFIED - Referenced in multiple 2024 workflow surveys
+
+**Software Pricing (CORRECTED):**
+- **ContentSnare**: ✅ VERIFIED - Starts at **$35/month** (NOT $89-179 as stated above) (https://contentsnare.com/pricing/)
+  - **CRITICAL ERROR**: The document claims ContentSnare is $89-179/month, which is WRONG
+  - Actual pricing: $35, $71, $119, $215+ per month
+  - This undermines the "gap" argument - affordable document collection already exists
+- **Karbon**: ✅ VERIFIED - $79-99/user/month (https://karbonhq.com/pricing/)
+- **TaxDome**: ✅ VERIFIED - $75-83/user/month (https://taxdome.com/pricing)
+
+### Critical Errors in This Document
+
+🚨 **ERROR #1: ContentSnare Pricing Wrong**
+
+The document states: "ContentSnare ($89-$179/month)"
+
+**ACTUAL PRICING:** $35-$215+/month (starts much lower)
+
+**Impact:** This destroys the "gap" argument. The document claims there's no affordable document collection solution, but ContentSnare starts at $35/month - cheaper than the proposed $99/month pricing.
+
+🚨 **ERROR #2: Liscio Pricing Misleading**
+
+The document states: "Liscio ($40-$80/user/month) - Problem: Expensive for solo firms ($480-$960/year for one person)"
+
+**Why this is misleading:** $40/month = $480/year is actually LESS than the proposed $99/month = $1,188/year
+
+**Impact:** The document proposes pricing HIGHER than what it criticizes as "too expensive"
+
+### Estimates & Assumptions
+
+**ALL ROI Calculations Are Unverified:**
+
+- **Time savings (31 minutes per client)**: ESTIMATE - Based on hypothetical process, not actual measurement
+- **$40/hour staff cost**: ASSUMPTION - May be lower for admin staff, higher for CPAs
+- **$200/hour billing rate**: ASSUMPTION - Likely too high for solo/small firms
+- **100-300 collection cycles per year**: ESTIMATE - Not validated with actual firms
+- **Annual value $15K-$30K**: ESTIMATE - Derived from unverified assumptions
+- **12.6x ROI claim**: CALCULATION based on estimates, NOT verified
+
+**Pricing Assumptions:**
+- **$99-199/month pricing**: NOT validated with target customers
+- **"Pays for itself in less than 1 month"**: Based on unverified time savings and billing rates
+- **No willingness-to-pay research conducted**
+
+**Market Size:**
+- **88,000 firms**: ESTIMATE - needs verification from Census Bureau
+- **0.1% market capture = 88 clients**: HYPOTHETICAL - No validation on conversion rates
+
+### Additional Research Needed
+
+**Before building this solution, you MUST:**
+
+1. **Test ContentSnare thoroughly** ($35/month):
+   - Sign up for their Basic plan
+   - Use it for 2-3 weeks with test clients
+   - Document what it does well and what's missing
+   - **Ask: Why would firms pay $99/month for your solution instead of $35 for ContentSnare?**
+
+2. **Conduct 10+ discovery calls** to validate:
+   - Do firms actually spend 31 minutes per client chasing documents?
+   - What's their actual billing rate? (likely lower than $200/hour)
+   - What tools do they currently use?
+   - Have they tried ContentSnare, Liscio, or similar? Why did they stop/not adopt?
+   - What would they actually pay for this solution?
+   - **Get specific commitment**: "If I built X for $99/month, would you buy it?"
+
+3. **Search for more competitors**:
+   - "accounting document collection software"
+   - "client portal for accountants"
+   - "tax document collection automation"
+   - Check G2/Capterra reviews for existing solutions
+   - Identify what unmet needs exist
+
+4. **Validate the "terrible existing software" claim**:
+   - Why do firms still use email if ContentSnare is $35/month?
+   - Is it really a price problem or a usability/features problem?
+   - What features would make them switch from email?
+
+5. **Test pricing assumptions**:
+   - Can solo firms making $62K/year afford $1,188/year (2% of revenue)?
+   - What's a typical software budget for small accounting firms?
+   - What price point triggers "too expensive" response?
+
+### Red Flags & Warnings
+
+⚠️ **This evaluation contains factual errors that weaken the business case**
+
+1. **ContentSnare is 2.8x CHEAPER** than claimed ($35 vs $89)
+2. **Proposed pricing is HIGHER** than criticized competitors
+3. **No verification** of time savings, billing rates, or ROI claims
+4. **No competitor product testing** - Don't know what ContentSnare actually does
+
+⚠️ **The "gap" may not exist**
+
+The entire argument rests on:
+- Existing solutions being "too expensive" - but ContentSnare is $35/month
+- Existing solutions being "too generic" - but haven't tested to verify
+- Firms using "email + spreadsheets" - but why? Price or features?
+
+**Before building, answer:**
+- Why don't firms use ContentSnare at $35/month?
+- What does it lack that they need?
+- Would they pay $99/month for something different?
+- Or is the real problem adoption/awareness, not solution quality?
+
+⚠️ **ROI calculations are theoretical**
+
+All value calculations assume:
+- 31 minutes saved per client (not measured)
+- $40/hour staff cost (not verified)
+- $200/hour billing rate (likely too high)
+- 100-300 cycles per year (not validated)
+
+**Real ROI might be much lower**, which impacts willingness to pay.
+
+⚠️ **Recommended Actions Before Building:**
+
+1. ✅ Sign up for ContentSnare ($35) and use it for 1 month
+2. ✅ Interview 10 accounting firm owners (including your friend)
+3. ✅ Ask them to show you their current process (screen share)
+4. ✅ Time how long it actually takes (don't assume 31 minutes)
+5. ✅ Ask what they currently pay for software
+6. ✅ Get pricing commitment: "Would you pay $X for Y?"
+7. ✅ Search G2/Capterra for "what users dislike about ContentSnare"
+8. ✅ Only build if you find a clear, validated gap
+
+⚠️ **Verdict Revision:**
+
+Original verdict: "✅ WORTH PURSUING - STRONG OPPORTUNITY"
+
+**Revised verdict:** ⚠️ **REQUIRES VALIDATION - Promising but unverified**
+
+The pain is real (verified by surveys), but:
+- Affordable solutions may already exist (ContentSnare $35/month)
+- ROI claims are unverified
+- Pricing assumptions untested
+- Competitor features unknown
+
+**Do NOT build until you complete the validation checklist above.**
+
+**Sources last verified:** November 2025

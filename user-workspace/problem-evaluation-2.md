@@ -389,3 +389,85 @@ During validation, watch for:
 ---
 
 **This is a solid problem, Chris. Slightly weaker than Document Collection, but still worth $35K-$90K annually. Your call which to pursue first.** 🧭
+
+---
+
+## SOURCES & VERIFICATION
+
+### Verified Facts
+
+**Pain Point Data:**
+- **55.5% workflow inefficiencies**: ✅ VERIFIED - 2025 State of Accounting Workflow Report (816 respondents)
+- **Workflow = top challenge**: ✅ VERIFIED - 63% in 2023/2024 surveys
+
+**Software Pricing:**
+- **Karbon**: ✅ VERIFIED - $79-99/user/month (https://karbonhq.com/pricing/)
+- **TaxDome**: ✅ VERIFIED - $75-83/user/month (https://taxdome.com/pricing)
+- **Jetpack Workflow**: ✅ VERIFIED - $30-50/user/month (https://jetpackworkflow.com/pricing/)
+- **Financial Cents**: ✅ VERIFIED - Team $39/user/month, Scale $69/user/month (https://financial-cents.com/pricing/)
+
+### Critical Issues
+
+⚠️ **MAJOR PROBLEM: Financial Cents Already Offers This at $39-69/month**
+
+The document proposes $149-299/month for workflow visibility, but:
+- **Financial Cents offers workflow management for $39-69/user/month**
+- This is 2-5x CHEAPER than proposed pricing
+- Why would firms pay $149-299 when Financial Cents exists at $39-69?
+
+**Questions to answer:**
+1. What does Financial Cents lack that firms need?
+2. Have firms tried it? Why don't they use it?
+3. Is the problem really a "gap in the market" or adoption/awareness?
+
+### Estimates & Assumptions
+
+**ALL ROI Calculations Are Unverified:**
+- **3-5 hours/week in status meetings**: ESTIMATE - Not measured with actual firms
+- **$200/hour manager rate**: ASSUMPTION - Likely too high for small firms
+- **$35K-$90K annual value**: DERIVED from unverified assumptions
+- **5-10% better utilization**: ASSUMPTION - No empirical basis
+- **$50K additional revenue claim**: HYPOTHETICAL calculation
+- **19-50x ROI**: Based on all the above unverified estimates
+
+**Market Size:**
+- **~25,000 firms with 2-20 employees**: ESTIMATE - No source provided
+
+**Pricing:**
+- **$149-299/month**: NOT validated with target customers
+- **No willingness-to-pay research**
+
+### Additional Research Needed
+
+1. **Test Financial Cents** ($39-69/month):
+   - Sign up and use for 1 month
+   - What does it do well?
+   - What's missing that firms need?
+
+2. **Test Jetpack Workflow** ($30-50/month):
+   - Even cheaper than Financial Cents
+   - Why isn't everyone using it?
+
+3. **Conduct discovery calls** with 5-10 multi-person firms:
+   - Do they actually spend 3-5 hours/week in status meetings?
+   - What tools do they currently use?
+   - Why haven't they adopted existing affordable solutions?
+   - What would they pay for workflow visibility?
+
+4. **Validate utilization claims**:
+   - Do firms actually achieve 5-10% better utilization with software?
+   - Get case studies or data from existing tool users
+
+### Red Flags & Warnings
+
+⚠️ **Pricing contradiction**: Proposes $149-299/month when competitors offer $30-69/month
+
+⚠️ **No competitor testing**: Haven't used Financial Cents, Jetpack, or other tools to verify gaps
+
+⚠️ **All value claims are estimates**: No actual measurement of time saved or revenue improved
+
+⚠️ **Revised Verdict**: ⚠️ **REQUIRES VALIDATION** - Pain is real but affordable solutions may already exist
+
+**Do NOT build until validating why existing $30-69/month solutions aren't being used.**
+
+**Sources last verified:** November 2025

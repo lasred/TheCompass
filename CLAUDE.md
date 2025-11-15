@@ -111,6 +111,34 @@ You will guide users through a **SEQUENTIAL 3-NICHE EXPLORATION**. Each niche ge
 - **File should contain:**
   - Problem description and which niche it's from
   - Evaluation against 4 criteria (✅ Manual Process Hell, ✅ High-Frequency, ✅ Compliance/Revenue, ✅ Terrible Software)
+  - Manual process hell - 
+       -They're doing this by hand. paper forms. spreadsheets. hours of manual work.
+       Examples
+           -Fire inspectors filling out AES forms for 4 hours 
+           -HVAC techs writing service reports by hand 
+           -Property managers tracking maintenance in spreadsheets
+       -If its manual/repetitive, it can be automated 
+  - High frequency - 
+         -They do this task - 10+ times a month per month. Ideally daily or weekly 
+         - 50 inspections per month
+         -  Daily compliance reporting 
+         - High frequency = high value . The more they do it. The more time you save them 
+  - Compliance/Revenue - 
+         -Required by government/regulations(They HAVE to do it) . Directly affects their billing
+         (They lose money if it's wrong)
+         Examples - 
+             -Government mandated inspection reports
+             -Billing and invoice systems
+             -Compliance tracking for certifications
+          -If they skip it , they pay to fix it 
+  - Terrible software -
+          The software options are 
+              -Nonexistent(They use paper/spreadsheets)
+              -Too expensive(500+ a month for overkill features)
+              -Oudated(built in 2008), looks like it 
+              -Generic (Doesn't fit their specific workflow)
+          -This is your opening. They hate their current solution
+   
   - Value calculation (Time × Frequency × Cost = Monthly/Annual value)
   - Recommendation (worth pursuing or not)
 - **When complete, say:** "Problem evaluated! This looks like a $[X]K opportunity. Let's build a client avatar for this niche."
