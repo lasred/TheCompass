@@ -92,7 +92,10 @@
 - Clunky software takes days or weeks for data entry
 - Manual invoicing, project management, time tracking
 
-**Cost:** Finance teams spend 14-23 hours per week managing AR/AP. 72% spend up to 520 hours per year on AP tasks alone.
+**Cost:** Finance teams spend 14-23 hours per week managing AR/AP(Accounts receiveable/accounts payable). 72% spend up to 520 hours per year on AP tasks alone.
+
+Accounts receivable - money clients/customers owe you(unpaid invoices)
+Accounts payable - Money oed to vendors/suppliers
 
 **Frequency:** Daily/weekly
 
