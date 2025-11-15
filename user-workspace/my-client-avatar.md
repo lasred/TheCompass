@@ -1,8 +1,11 @@
-# Client Avatar: Small CPA Firms with Document Collection Pain
+# Client Avatar: Small CPA Firms with Tax Season & Document Collection Pain
 
-**Created:** November 11, 2025
-**Problem Solved:** Client Document Collection Automation
+**Created:** November 11, 2025 (Updated Nov 15 based on friend feedback)
+**PRIMARY Problem:** Tax Season Capacity Planning & Workload Management
+**SECONDARY Problem:** Client Document Collection Automation
 **Skill used:** client-avatar-builder
+
+**IMPORTANT:** Friend feedback prioritized Tax Season pain: "Would sell big time. Friend definitely emphasizes the pain of the tax season."
 
 ---
 
