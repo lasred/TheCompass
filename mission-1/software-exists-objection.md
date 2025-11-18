@@ -21,11 +21,11 @@ Generic fire inspection software tries to serve:
 **Result:** Does everything poorly, nothing well.
 
 **Your custom software:**
-Built for California Blaze Protection's exact workflow. Their exact forms. Their exact process.
+Built for one client's exact workflow. Their exact forms. Their exact process.
 
 Not "fire inspection software."
 
-**"California Blaze Protection's AES form automation tool."**
+**"Blaze Operations - California AES form automation tool."**
 
 That specificity is the value.
 
@@ -77,11 +77,11 @@ $15K upfront + $1,500/month custom software.
 
 ---
 
-## The California Blaze Protection Example
+## Real Client Example
 
 **Q:** "Doesn't fire inspection software already exist?"
 
-**A:** Yes. California Blaze Protection tried several:
+**A:** Yes. This fire inspection company tried several:
 
 - One was built in 2008, barely worked, crashed constantly
 - One didn't support California AES forms specifically
@@ -171,7 +171,7 @@ Government forms change. Local regulations update. State requirements vary.
 "We looked at [Generic Software] but it was too expensive/didn't fit/was complicated."
 
 **You say:**
-"That's exactly why I'm here. Generic software tries to be everything for everyone. I build software specifically for YOUR workflow. Not for fire inspectors in general - for California Blaze Protection specifically. That's the difference."
+"That's exactly why I'm here. Generic software tries to be everything for everyone. I build software specifically for YOUR workflow. Not for fire inspectors in general - for your company specifically. That's the difference."
 
 ---
 

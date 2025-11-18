@@ -1,12 +1,12 @@
-# Case Study: California Blaze Protection
+# Case Study: Fire Inspection Company
 
-This is Zane's first client. Real numbers. Real problem. Real solution.
+Real case study from one of Zane's clients. Real numbers. Real problem. Real solution.
 
 ---
 
 ## The Client
 
-**Company:** California Blaze Protection
+**Company:** Regional fire inspection company
 **Industry:** Fire inspection services
 **Size:** 5 inspectors
 **Location:** California
@@ -68,7 +68,7 @@ Either way: **Huge pain. Clear value.**
 
 ## The Solution
 
-Custom software that:
+Custom software (called "Blaze Operations") that:
 - Pulls inspection data from their existing CRM
 - Auto-fills California AES forms specifically
 - Generates PDFs ready to submit
