@@ -110,7 +110,7 @@ The Compass makes you faster. Not passive.
 
 ## Getting Started
 
-Open CLAUDE.md and say "hello."
+Open Claude Code and say "hello."
 
 The Compass will configure itself and guide you into Mission 1.
 

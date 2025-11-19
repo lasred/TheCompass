@@ -12,7 +12,7 @@ Welcome to The Compass, your AI business-building super agent.
 
 2. **Open in VS Code** with Claude Code extension installed
 
-3. **Open CLAUDE.md** and say "hello"
+3. **Open Claude Code** and say "hello"
 
 4. **Follow the prompts** - The Compass will configure itself
 

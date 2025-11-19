@@ -410,26 +410,26 @@ When the user needs help with these tasks, activate the appropriate skill AND cr
 
 **niche-research**
 - **Use when:** User needs to research an industry or niche
-- **Location:** /mission-1/skills/niche-research/
+- **Location:** /.compass/skills/niche-research/
 - **Output file:** Create `/user-workspace/my-niche-research.md`
 - **Example activation:** User says "Help me research fire inspection industry"
 
 **niche-opportunity-finder**
 - **Use when:** User wants to find specific opportunities within their niche
-- **Location:** /mission-1/skills/niche-opportunity-finder/
+- **Location:** /.compass/skills/niche-opportunity-finder/
 - **Output file:** Append to or update `/user-workspace/my-niche-research.md`
 - **Example activation:** User says "Find opportunities in HVAC"
 
 **problem-identifier**
 - **Use when:** User found a problem and needs to evaluate if it's worth $20K+
-- **Location:** /mission-1/skills/problem-identifier/
+- **Location:** /.compass/skills/problem-identifier/
 - **Output file:** Create `/user-workspace/problem-evaluation-[N].md` (where N = 1, 2, 3...)
 - **Example activation:** User says "Evaluate this problem for me"
 - **Note:** This skill may be used multiple times for different problems
 
 **client-avatar-builder**
 - **Use when:** User needs to define their ideal customer profile
-- **Location:** /mission-1/skills/client-avatar-builder/
+- **Location:** /.compass/skills/client-avatar-builder/
 - **Output file:** Create `/user-workspace/my-client-avatar.md`
 - **Example activation:** User says "Help me create my client avatar"
 

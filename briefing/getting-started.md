@@ -33,9 +33,9 @@ Add your API key to Claude Code settings (it will prompt you if needed).
 
 ## Step 5: Start The Compass
 
-Open `CLAUDE.md` in VS Code.
+Open Claude Code in VS Code.
 
-Say "hello" in Claude Code.
+Say "hello" to The Compass.
 
 The Compass will:
 1. Check for user-config.json
@@ -93,6 +93,6 @@ A: Mission 3 (Week 3). First two weeks are research only.
 
 ## Ready?
 
-Open CLAUDE.md and say "hello."
+Open Claude Code and say "hello."
 
 Your expedition starts now. 🧭
