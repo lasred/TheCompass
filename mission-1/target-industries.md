@@ -130,11 +130,11 @@ These industries are proven to have boring, valuable B2B problems.
 
 ### Focus:
 
-Pick 1-2 industries max for Week 1.
+Pick exactly 3 industries for Week 1.
 
-Deep research in one industry beats shallow research across five.
+Deep research across three niches gives you comparison data to make the right choice.
 
-You're learning to spot valuable problems. Master that skill in one industry first.
+You're learning to spot valuable problems. Testing across three industries prevents tunnel vision and gives you backup options.
 
 ---
 
@@ -155,15 +155,23 @@ Use The Compass skills to accelerate:
 
 ## Your Action This Week
 
-1. Pick 1-2 industries from this list
-2. Research 10-15 businesses in those industries
-3. Identify problems that meet all 4 criteria
-4. Calculate value using the formula
+1. Pick 3 industries from this list
+2. For EACH industry (sequentially):
+   - Research 3-5 businesses
+   - Identify at least one problem that meets all 4 criteria
+   - Calculate value using the formula
+   - Create client avatar
+3. Compare all three niches
+4. Choose which to pursue first
 5. Use Compass skills to accelerate research
 
 By end of week, you should know:
-- Which industry you're targeting
-- 1-3 specific problems in that industry worth $20K+
-- Who your ideal client is
+- All three industries you researched
+- At least one valuable problem per industry
+- Which industry has the most painful, profitable problems
+- Who your ideal clients are in each niche
+- Which niche you're choosing to pursue (with two backups)
+
+**The advantage:** In Mission 2, you can reach out to all three niches simultaneously and see which one responds best. This 3x's your chances of landing your first client fast.
 
 Go find gold. 🧭

@@ -1,6 +1,6 @@
 # Mission 1: Problem & Niche Selection
 
-**Objective:** Pick your niche and identify 1-3 problems worth $20K+ in that industry
+**Objective:** Research three niches sequentially, identify at least one painful problem worth $20K+ in each, then compare all three to determine which offers the best opportunities
 
 **Timeline:** 1 week
 
@@ -9,61 +9,101 @@
 ## What You're Doing This Week
 
 1. Learn The Boring Problems Framework
-2. Pick 1-2 target industries
-3. Research 10-15 businesses online
-4. Identify problems using the 4 criteria
-5. Calculate problem value
-6. Create your client avatar
-7. Post findings in Basecamp
+2. Pick 3 industries to explore
+3. For EACH industry (sequentially):
+   - Research 3-5 businesses online
+   - Identify problems using the 4 criteria
+   - Calculate problem value
+   - Create client avatar
+4. Compare all three niches
+5. Choose primary niche to pursue
+6. Post findings in Basecamp
 
 ## The Mission 1 Workflow
 
-You'll be guided through 5 steps in sequence:
+You'll complete the **FULL RESEARCH CYCLE** for each of three niches, then compare at the end.
 
-### STEP 1: Niche Research (Days 2-3)
-**What:** Research your chosen industry deeply
-**Skill:** niche-research
-**Output:** `/user-workspace/my-niche-research.md`
-**Duration:** 1-2 days
+### NICHE #1 (Days 1-2)
 
-### STEP 2: Opportunity Identification (Day 3)
-**What:** Find specific problems within your niche
-**Skill:** niche-opportunity-finder
-**Output:** Updates your research file with opportunities
-**Duration:** Half day
+**Step 1a: Niche Research**
+- **Skill:** niche-research
+- **Output:** `/user-workspace/{niche-name}-niche/research.md`
 
-### STEP 3: Problem Evaluation (Days 4-5)
-**What:** Evaluate each problem against the 4 criteria
-**Skill:** problem-identifier (use multiple times)
-**Output:** `/user-workspace/problem-evaluation-[N].md` for each problem
-**Duration:** 1-2 days
+**Step 1b: Opportunity Identification**
+- **Skill:** niche-opportunity-finder
+- **Output:** `/user-workspace/{niche-name}-niche/opportunities.md`
 
-### STEP 4: Client Avatar (Day 5)
-**What:** Define your ideal customer
-**Skill:** client-avatar-builder
-**Output:** `/user-workspace/my-client-avatar.md`
-**Duration:** Half day
+**Step 1c: Problem Evaluation**
+- **Skill:** problem-identifier
+- **Output:** `/user-workspace/{niche-name}-niche/problem-evaluation.md`
 
-### STEP 5: Mission Checkpoint (Days 6-7)
-**What:** Document your findings for Basecamp
-**Template:** Use `/templates/mission-1-checkpoint.md`
-**Output:** `/user-workspace/mission-1-checkpoint.md`
-**Duration:** 1-2 hours
+**Step 1d: Client Avatar**
+- **Skill:** client-avatar-builder
+- **Output:** `/user-workspace/{niche-name}-niche/client-avatar.md`
 
-The Compass guides you through each step. Can't skip ahead - each builds on the previous.
+---
+
+### NICHE #2 (Days 3-4)
+
+Repeat the full cycle:
+- Research → Opportunities → Problem Evaluation → Avatar
+- All files saved to `/user-workspace/{niche-2-name}-niche/`
+
+---
+
+### NICHE #3 (Days 5-6)
+
+Repeat the full cycle:
+- Research → Opportunities → Problem Evaluation → Avatar
+- All files saved to `/user-workspace/{niche-3-name}-niche/`
+
+---
+
+### COMPARISON & CHECKPOINT (Days 6-7)
+
+**Step 5: Compare All Three & Create Checkpoint**
+- **Template:** Use `/templates/mission-1-checkpoint.md`
+- **Output:** `/user-workspace/mission-1-checkpoint.md`
+- **What:** Compare all three niches and choose your primary focus
+
+The Compass guides you through each niche sequentially. Can't skip ahead - complete each niche fully before moving to the next.
 
 ## Your Workspace
 
 All your Mission 1 work is saved in `/user-workspace/`:
 - This folder is private (gitignored)
+- Each niche gets its own folder (e.g., `/user-workspace/hvac-niche/`)
 - The Compass creates files as you complete steps
 - You can reference these files anytime
 - They become your business foundation
 
+**File structure:**
+```
+/user-workspace/
+  /hvac-niche/
+    research.md
+    opportunities.md
+    problem-evaluation.md
+    client-avatar.md
+  /fire-inspection-niche/
+    research.md
+    opportunities.md
+    problem-evaluation.md
+    client-avatar.md
+  /property-management-niche/
+    research.md
+    opportunities.md
+    problem-evaluation.md
+    client-avatar.md
+  mission-1-checkpoint.md
+```
+
 When Mission 1 is complete, you'll have:
-- ✅ Clear understanding of your niche
-- ✅ Validated problems worth $20K+
-- ✅ Defined ideal customer
+- ✅ Three fully-researched niches with comparison data
+- ✅ Validated problems worth $20K+ in each niche
+- ✅ Client avatars for all three opportunities
+- ✅ Clear decision on which niche to pursue first
+- ✅ Two backup niches if your first choice doesn't validate
 - ✅ Documentation to share with community
 
 ## Why This Matters

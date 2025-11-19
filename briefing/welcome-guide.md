@@ -53,10 +53,12 @@ The real magic happens at Basecamp: https://www.skool.com/base-camp
 
 ## Your First Mission
 
-Mission 1 starts now: Pick your niche and find 3 problems worth $20K+.
+Mission 1 starts now: Research three niches, evaluate problems in each, and determine which offers the best opportunities.
 
 No outreach yet. Just research.
 
 You have one week.
+
+By the end, you'll have three fully-researched opportunities and can test all three in Mission 2 to see which responds best.
 
 Let's move. 🧭

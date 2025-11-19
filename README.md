@@ -44,9 +44,10 @@ All your work is saved in `/user-workspace/` directory:
 ### The Mission System
 
 **Mission 1: Problem & Niche Selection** (Week 1 - Available Now)
-- Pick your niche
-- Identify problems worth $20K+
-- Create client avatar
+- Research three niches sequentially
+- Identify at least one $20K+ problem per niche
+- Create client avatars for each
+- Compare and choose primary niche
 - Complete checkpoint
 
 **Mission 2-6:** Unlock weekly
