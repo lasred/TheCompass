@@ -1,6 +1,8 @@
 ## Purpose
 Create and launch email campaigns in Instantly with written emails, A/B testing, follow-up sequences, and proper sending configuration.
 
+**CRITICAL:** Use Instantly V2 API only. API docs: https://developer.instantly.ai/api/v2
+
 ## Trigger
 - After email approval
 - "Launch campaigns"
@@ -75,14 +77,16 @@ No winner selection - runs full campaign
 - Campaign 2: Inbox 3 + Inbox 4
 - Campaign 3: Inbox 5 + Inbox 6
 
-## Pre-Launch: Budget Path Warmup Check
+## Pre-Launch: Lite Path Warmup Check
 
-If Budget path, verify warmup:
+If Lite path, verify warmup using V2 API:
 
 ```bash
-curl -X GET https://api.instantly.ai/v1/inboxes/{id}/warmup \
+curl -X GET https://api.instantly.ai/v2/account/emails \
   -H "Authorization: Bearer {API_KEY}"
 ```
+
+Check warmup status in response for each inbox.
 
 Verify:
 - Status: Active
@@ -106,43 +110,36 @@ Launch in {Y} days.
 [Check status](https://app.instantly.ai/inboxes)
 ```
 
-## API Request
+## API Request (V2 API)
+
+**Use Instantly V2 API for all campaign operations.**
 
 ```bash
-curl -X POST https://api.instantly.ai/v1/campaigns \
+curl -X POST https://api.instantly.ai/v2/campaigns \
   -H "Authorization: Bearer {API_KEY}" \
+  -H "Content-Type: application/json" \
   -d '{
     "name": "HVAC_Nov2025_JobCosting",
-    "from_inboxes": ["inbox1@domain1.com", "inbox2@domain1.com"],
+    "from_emails": ["inbox1@domain1.com", "inbox2@domain1.com"],
     "daily_limit": 25,
     "stop_on_reply": true,
-    "stop_on_ooo": true,
+    "stop_on_auto_reply": true,
     "track_opens": true,
     "track_clicks": true,
     "timezone": "America/Los_Angeles",
-    "leads": [...],
-    "sequences": [
-      {
-        "step": 1,
-        "delay_days": 0,
-        "subject_variants": [...],
-        "body": "..."
-      },
-      {
-        "step": 2,
-        "delay_days": 3,
-        "subject": "Re: {{step_1_subject}}",
-        "body": "..."
-      },
-      {
-        "step": 3,
-        "delay_days": 7,
-        "subject": "Last note - JobCosting",
-        "body": "..."
-      }
-    ]
+    "schedule": {
+      "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+      "start_hour": 9,
+      "end_hour": 17
+    }
   }'
 ```
+
+**Note:** V2 API structure differs from V1. Key changes:
+- `from_inboxes` → `from_emails`
+- `stop_on_ooo` → `stop_on_auto_reply`
+- Leads and sequences added separately via follow-up API calls
+- Full V2 docs: https://developer.instantly.ai/api/v2
 
 ## Error Handling
 

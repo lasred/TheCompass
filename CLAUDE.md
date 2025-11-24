@@ -1345,7 +1345,7 @@ Say: "✅ API keys saved! Now let's verify your infrastructure setup."
 
 4. If LITE: "Have your inboxes been warming for 21+ days? (yes/no)"
    - If no: "You'll need to wait 3 weeks before launching. In Instantly, go to 'Inboxes' → turn on warmup for all 6 inboxes. Set warmup to 10-20 emails/day. Check back in 21 days."
-   - If yes: "Perfect! Let's verify via Instantly API..." [Check warmup status]
+   - If yes: "Perfect! Let's verify via Instantly V2 API..." [Check warmup status using V2 API: https://developer.instantly.ai/api/v2]
 
 **After all infrastructure confirmed:**
 
@@ -1400,6 +1400,8 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 **PHASE 3: CAMPAIGN LAUNCH (10-15 min)**
 
+**CRITICAL:** All Instantly operations must use V2 API. API docs: https://developer.instantly.ai/api/v2
+
 1. Use `instantly-campaign-launcher` skill
 
 2. Campaign naming format:
@@ -1411,7 +1413,8 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - `Fire_Nov2025_AESForms`
    - `PropMgmt_Nov2025_ComplianceTracking`
 
-3. For LITE path: Verify inbox warmup via Instantly API
+3. For LITE path: Verify inbox warmup via Instantly V2 API
+   - Use V2 endpoint: GET /v2/account/emails
    - Check warmup status: Active
    - Check days warming: 21+
    - If under 21 days: Block launch, show remaining days
@@ -1516,7 +1519,7 @@ Check back in {days_remaining} days.
 
 3. If thresholds met:
    - Use `campaign-diagnostics` skill
-   - Fetch stats from Instantly API for all 3 campaigns
+   - Fetch stats from Instantly V2 API for all 3 campaigns (GET /v2/campaigns/{id}/analytics)
    - Calculate open rate, reply rate, interest rate per niche
    - Identify winner (highest interest rate)
    - Calculate statistical confidence

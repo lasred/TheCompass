@@ -1,6 +1,8 @@
 ## Purpose
 Analyze campaign performance across 3 niches, identify winning niche, provide statistical confidence, recommend next steps.
 
+**CRITICAL:** Use Instantly V2 API only. API docs: https://developer.instantly.ai/api/v2
+
 ## Trigger
 - "Run diagnostics"
 - "Check campaign data"
@@ -31,13 +33,24 @@ Current snapshot (insufficient):
 - PropMgmt: {sent} sent, {replies} replies
 ```
 
-## Data Collection
+## Data Collection (V2 API)
 
-Fetch from Instantly API:
+**Use Instantly V2 API for fetching campaign statistics.**
+
+Fetch from Instantly V2 API:
 ```bash
-curl -X GET https://api.instantly.ai/v1/campaigns/{id}/stats \
+curl -X GET https://api.instantly.ai/v2/campaigns/{campaign_id}/analytics \
   -H "Authorization: Bearer {API_KEY}"
 ```
+
+Alternative - Get all campaigns:
+```bash
+curl -X GET https://api.instantly.ai/v2/campaigns \
+  -H "Authorization: Bearer {API_KEY}"
+```
+
+**Note:** V2 API endpoints differ from V1. Use `/v2/campaigns/{id}/analytics` for detailed stats.
+Full V2 docs: https://developer.instantly.ai/api/v2
 
 Collect per campaign:
 - Total sent
