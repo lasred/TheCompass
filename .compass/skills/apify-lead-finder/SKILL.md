@@ -13,7 +13,7 @@ Scrape Google Maps for companies in specified niche and location using Apify's G
 {
   "niche": "HVAC inspection companies",
   "location": "California",
-  "limit": 300,
+  "limit": 600,
   "path": "premium" | "budget"
 }
 ```
@@ -29,7 +29,7 @@ curl -X POST https://api.apify.com/v2/acts/nwua9Gu5YrADL7ZDj/runs \
   -H "Content-Type: application/json" \
   -d '{
     "searchStringsArray": ["{niche} in {location}"],
-    "maxCrawledPlacesPerSearch": 300,
+    "maxCrawledPlacesPerSearch": 600,
     "language": "en",
     "includeWebsites": true,
     "includeEmails": true,

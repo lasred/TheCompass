@@ -933,7 +933,7 @@ You need 3 cheap domains for sending emails.
 
 ## STEP 4: SCRAPE LEADS (30 minutes)
 
-I'll use Apify to scrape 300 companies per niche from Google Maps.
+I'll use Apify to scrape 600 companies per niche from Google Maps.
 
 **What you need:**
 - Your 3 niche names from Mission 1
@@ -941,13 +941,15 @@ I'll use Apify to scrape 300 companies per niche from Google Maps.
 
 **What I'll do:**
 1. Search Google Maps for "{niche} in {location}"
-2. Scrape 300 companies per niche (900 total)
+2. Scrape 600 companies per niche (1800 total)
 3. Extract: company name, address, phone, website, rating, reviews
 4. Save to user-workspace/{niche-slug}-leads.json
 
-**Cost:** ~$4 for 900 companies (covered by $5 free monthly credits)
+**Cost:** ~$7 for 1800 companies (you'll need to add ~$2 beyond free credits)
 
-**Time:** 5-10 minutes per niche
+**Time:** 10-15 minutes per niche
+
+**Why 600?** AnyMailFinder finds emails for ~50-60% of companies, so 600 ensures we get 300-360 verified emails per niche.
 
 Type "Start scraping" when ready.
 
@@ -955,18 +957,21 @@ Type "Start scraping" when ready.
 
 ## STEP 5: ENRICH EMAILS (20 minutes)
 
-I'll use AnyMailFinder to find verified emails for scraped companies.
+I'll use AnyMailFinder to find verified **decision-maker** emails for scraped companies.
 
 **What I'll do:**
-1. Send company data to AnyMailFinder API
-2. Find decision-maker emails (owner, president, CEO)
-3. Verify email deliverability
-4. Expected find rate: 60-70% (both Premium and Lite)
-5. Goal: ~600 verified emails from 900 companies
+1. Send company domains to AnyMailFinder API
+2. Search for decision-makers (Owner, CEO, President, Founder)
+3. Extract: first_name, last_name, email, title
+4. Verify email deliverability (95%+ confidence)
+5. Expected find rate: 50-60% (both Premium and Lite)
+6. Goal: ~900-1080 verified decision-maker emails from 1800 companies
+
+**Why decision-makers?** We get their actual first names (not generic info@ emails), which makes emails more personal and increases response rates.
 
 **Cost:** $49/month (pay per email found, within plan limits)
 
-**Time:** 10-15 minutes for all 3 niches
+**Time:** 15-20 minutes for all 3 niches
 
 This happens automatically after scraping.
 
@@ -974,14 +979,15 @@ This happens automatically after scraping.
 
 ## STEP 6: WRITE EMAILS (30 minutes)
 
-I'll write personalized cold emails using the 7-Part Framework.
+I'll write personalized cold emails using the 8-Part Framework.
 
 **What I'll use:**
+- Decision-maker first names from AnyMailFinder (e.g., "John")
 - Your Mission 1 research (problems, pain points, language)
 - Real Apify data (company name, rating, reviews, location)
 - Industry averages for pain quantification
 
-**7-Part Framework:**
+**8-Part Framework:**
 1. Subject Line (shocking question with ???)
 2. Hook (compliment using real data)
 3. Problem Statement (specific industry pain)
@@ -989,10 +995,11 @@ I'll write personalized cold emails using the 7-Part Framework.
 5. Solution Tease ("What if..." transformation)
 6. Social Proof (generic industry reference)
 7. CTA (ultra casual, low pressure)
+8. Signature ({{sendingAccountFirstName}} - auto-populated by Instantly)
 
 **What I'll create:**
 - 3 subject line variants per niche (A/B testing)
-- Personalized email for each lead (~600 emails)
+- Personalized email for each lead (~900-1080 decision-maker emails)
 - Day 3 follow-up sequence
 - Day 7 follow-up sequence
 
@@ -1000,13 +1007,23 @@ I'll write personalized cold emails using the 7-Part Framework.
 
 **Tone:** Conversational, not salesy
 
+**Example personalization:**
+- "John," (decision-maker's actual first name)
+- "Saw ACME HVAC has 4.8 stars..." (company data)
+- Signature auto-populated with your sending account first name
+
 **I'll show you 9 sample emails (3 per niche) for approval before proceeding.**
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## STEP 7: LAUNCH CAMPAIGNS (15 minutes)
 
-I'll create 3 campaigns in Instantly (one per niche).
+I'll create 3 campaigns in Instantly (one per niche) using V2 API.
+
+**What I'll do:**
+1. Create campaign with embedded 3-step email sequence
+2. Upload all leads with custom variables (subjects, body, follow-ups)
+3. Activate campaign to start sending
 
 **Campaign setup:**
 - Campaign 1: {Niche1}_{Month}{Year}_{ProblemAngle}
@@ -1017,7 +1034,7 @@ I'll create 3 campaigns in Instantly (one per niche).
 - 25 emails/inbox/day
 - 2 inboxes per campaign = 50 emails/day per niche
 - 150 total emails/day across all 3 campaigns
-- Timeline: ~4-5 days to send all 600 emails
+- Timeline: ~6-7 days to send all 900-1080 emails
 
 **A/B testing:**
 - 3 subject variants per campaign (33% each)
@@ -1355,8 +1372,11 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 **PHASE 1: LEAD ACQUISITION (30-45 min)**
 
-1. Use `apify-lead-finder` skill to scrape 300 companies per niche (900 total) via Apify Google Maps Scraper
-2. Use `anymailfinder-enricher` skill to find verified emails (60-70% find rate for both Premium and Lite paths)
+1. Use `apify-lead-finder` skill to scrape 600 companies per niche (1800 total) via Apify Google Maps Scraper
+2. Use `anymailfinder-enricher` skill to find verified decision-maker emails (50-60% find rate for both Premium and Lite paths)
+   - Searches for: Owner, CEO, President, Founder
+   - Returns: first_name, last_name, email, title
+   - Target: ~300-360 decision-maker emails per niche
 3. Save results to `user-workspace/{niche-slug}-leads.json`
 4. Verify minimum 75 emails per niche
 5. If below 75: Warn user, suggest solutions, allow launch if user confirms
@@ -1374,22 +1394,25 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 2. Use `email-writer-professional` skill to write personalized emails
 
-3. Apply 7-Part Email Framework for EVERY email:
+3. Apply 8-Part Email Framework for EVERY email:
    - Subject Line
-   - Hook (pattern interrupt)
-   - Recognition (prove you understand)
-   - Make It Real (quantify the pain)
+   - Hook (compliment using real data)
+   - Problem Statement (specific industry pain)
+   - Make It Real (quantify pain with industry averages)
    - Solution Tease (show better way)
-   - Social Proof (make believable)
+   - Social Proof (generic industry reference)
    - Call to Action (low-pressure ask)
+   - Signature ({{sendingAccountFirstName}})
 
-4. Generate 3 subject line variants per niche (A/B testing)
+4. **Use decision-maker first names** from AnyMailFinder enrichment (e.g., "John,")
 
-5. Create Day 3 and Day 7 follow-up sequences
+5. Generate 3 subject line variants per niche (A/B testing)
 
-6. Save to `user-workspace/{niche-slug}-emails.json`
+6. Create Day 3 and Day 7 follow-up sequences
 
-7. **SHOW 3 SAMPLE EMAILS PER NICHE (9 total) FOR APPROVAL**
+7. Save to `user-workspace/{niche-slug}-emails.json`
+
+8. **SHOW 3 SAMPLE EMAILS PER NICHE (9 total) FOR APPROVAL**
    - Display full email with all subject variants
    - Wait for user approval
    - If "REWRITE {niche}": Regenerate that niche
@@ -1419,14 +1442,37 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - Check days warming: 21+
    - If under 21 days: Block launch, show remaining days
 
-4. Upload leads + personalized emails to each campaign
+4. **For EACH campaign, execute V2 API workflow:**
+
+   **Step A:** Create campaign with embedded 3-step sequence
+   - POST /v2/campaigns
+   - Include sequences array with 3 steps:
+     - Step 1 (Day 0): Initial email with 3 subject variants for A/B testing
+     - Step 2 (Day 3): Follow-up if no reply
+     - Step 3 (Day 7): Final follow-up if no reply
+   - Returns campaign_id
+
+   **Step B:** Upload leads with custom variables
+   - POST /v2/leads/add
+   - Each lead includes custom_variables with:
+     - email_body (personalized email using decision-maker first name)
+     - subject_variant_a, subject_variant_b, subject_variant_c
+     - follow_up_day_3 (Day 3 follow-up body)
+     - follow_up_day_7 (Day 7 follow-up body)
+     - problemAngle (for dynamic subject lines)
+
+   **Step C:** Activate campaign
+   - PATCH /v2/campaigns/{campaign_id}
+   - Set status: "active"
+   - Campaign starts sending within 1 hour
 
 5. Configure:
    - Sending: 25 emails/inbox/day
-   - A/B testing: 3 subject variants (33% each)
-   - Follow-ups: Day 3, Day 7
+   - A/B testing: 3 subject variants in Step 1 (33% each)
+   - Follow-ups: Day 3, Day 7 (embedded in sequence)
    - Stop on reply: YES
-   - Unsubscribe link: YES
+   - Stop on out-of-office: YES
+   - Timezone: Etc/GMT+12
 
 6. Distribute across inboxes:
    - Campaign 1 (Niche 1): Inbox 1 + Inbox 2
@@ -1437,7 +1483,7 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 8. User types "LAUNCH" → Show summary → User types "CONFIRM" → Execute
 
-9. Create `mission-2-progress.md` tracking file
+9. Create `mission-2-progress.md` tracking file with campaign IDs
 
 10. Display success message with Instantly dashboard links
 

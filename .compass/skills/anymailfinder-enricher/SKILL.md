@@ -1,21 +1,26 @@
-# ANYMAILFINDER ENRICHER SKILL
+# ANYMAILFINDER DECISION-MAKER ENRICHER SKILL
 
 ## Purpose
-Enrich company data with verified email addresses using AnyMailFinder. **PREMIUM PATH ONLY.**
+Find verified decision-maker emails (CEO, Owner, President, Founder) using AnyMailFinder. Used for both Premium and Lite paths.
+
+**Key Change:** We search for **decision-makers** (not just any company email), so we get the actual person's first name, last name, email, and title.
 
 ## Trigger
-- After AirScale scraping (Premium path only)
-- "Enrich {niche} with emails"
+- After Apify scraping completes
+- "Enrich emails for {niche}"
+- During Mission 2 lead acquisition phase
 
 ## Input
-Company data from AirScale (no emails yet):
+Company data from Apify (with website domains):
 ```json
 {
   "companies": [
     {
       "company_name": "ACME HVAC Services",
-      "website": "acmehvac.com",
+      "website": "https://acmehvac.com",
       "location": "San Diego, CA",
+      "rating": 4.8,
+      "review_count": 47,
       "phone": "+1-619-555-0123"
     }
   ]
@@ -24,69 +29,224 @@ Company data from AirScale (no emails yet):
 
 ## Process
 
-### Step 1: Call AnyMailFinder API
+### Step 1: Extract Domain from Website
 
-For each company:
+For each company, extract clean domain:
+- `https://acmehvac.com` → `acmehvac.com`
+- `http://www.acmehvac.com` → `acmehvac.com`
+- Skip companies without website
+
+### Step 2: Search for Decision-Maker via AnyMailFinder API
+
+**API Endpoint:** POST https://api.anymailfinder.com/v5.0/search/person
+
 ```bash
-curl -X POST https://api.anymailfinder.com/v4.0/search/company \
+curl -X POST https://api.anymailfinder.com/v5.0/search/person \
   -H "Authorization: Bearer {API_KEY}" \
+  -H "Content-Type: application/json" \
   -d '{
-    "company_name": "ACME HVAC Services",
-    "company_domain": "acmehvac.com",
-    "role": "owner"
+    "domain": "acmehvac.com",
+    "full_name": "",
+    "job_title": "owner OR ceo OR president OR founder"
   }'
 ```
 
-### Step 2: Batch Processing
-- Process in batches of 50
-- Only charged for verified emails (97%+ confidence)
-- Skip if no website available
-
-### Step 3: Merge with AirScale Data
+**Response format:**
 ```json
 {
-  "company_name": "ACME HVAC Services",
+  "status": "success",
+  "email": "john@acmehvac.com",
+  "first_name": "John",
+  "last_name": "Smith",
+  "job_title": "Owner",
+  "confidence": 98,
+  "email_status": "valid"
+}
+```
+
+### Step 3: Filter for Decision-Makers
+
+Priority order (if multiple results):
+1. **Owner** (highest priority)
+2. **CEO**
+3. **President**
+4. **Founder**
+5. **Co-Founder**
+
+If multiple people with same title, pick first result.
+
+### Step 4: Batch Processing
+
+- Process in batches of 50 companies
+- Rate limit: 10 requests/second (AnyMailFinder API limit)
+- Only charged for verified emails (95%+ confidence)
+- Skip companies without website domain
+
+### Step 5: Merge with Apify Data
+
+Combine decision-maker data with company data:
+```json
+{
   "email": "john@acmehvac.com",
   "first_name": "John",
   "last_name": "Smith",
   "title": "Owner",
+  "company_name": "ACME HVAC Services",
+  "website": "https://acmehvac.com",
+  "location": "San Diego, CA",
+  "rating": 4.8,
+  "review_count": 47,
+  "phone": "+1-619-555-0123",
   "confidence": 98,
-  "source": "anymailfinder",
-  ...original_data
+  "email_source": "anymailfinder",
+  "enriched_at": "2025-11-24T10:30:00Z"
 }
 ```
 
-### Step 4: Quality Filter
-- Only keep 97%+ confidence
-- Remove duplicates
-- Prefer decision-makers
+### Step 6: Quality Filter
+
+- Only keep emails with **95%+ confidence**
+- Email status must be "valid" (not "catch-all" or "unknown")
+- Remove duplicates (same email address)
+- Must have first_name (required for email personalization)
+
+## Expected Find Rate
+
+**Target:** 50-60% of companies with websites
+
+Why this rate:
+- Not all companies have decision-maker emails publicly listed
+- Some use personal emails (gmail, yahoo) that AnyMailFinder won't find
+- Smaller companies less likely to have professional emails
+
+**From 600 companies scraped per niche:**
+- Expected: 300-360 decision-maker emails found
+- This ensures minimum 75 emails per niche for campaign
 
 ## Output
 
 Updates: `user-workspace/{niche-slug}-leads.json`
 
-Adds `email_source` field: "anymailfinder"
+```json
+{
+  "niche": "hvac-inspection",
+  "location": "California",
+  "total_scraped": 600,
+  "emails_found": 342,
+  "find_rate": "57.0%",
+  "decision_maker_breakdown": {
+    "owner": 189,
+    "ceo": 87,
+    "president": 52,
+    "founder": 14
+  },
+  "avg_confidence": 97.2,
+  "cost": "$51.30",
+  "enriched_at": "2025-11-24T10:45:00Z",
+  "leads": [
+    {
+      "email": "john@acmehvac.com",
+      "first_name": "John",
+      "last_name": "Smith",
+      "title": "Owner",
+      "company_name": "ACME HVAC Services",
+      "location": "San Diego, CA",
+      "rating": 4.8,
+      "review_count": 47,
+      "confidence": 98,
+      "email_source": "anymailfinder"
+    }
+  ]
+}
+```
 
-## Example Output
+## Example Output (Console)
 
 ```
-✅ EMAIL ENRICHMENT COMPLETE: HVAC Inspection
+✅ DECISION-MAKER ENRICHMENT COMPLETE: HVAC Inspection
 
-Companies processed: 287
-Emails found: 186 (64.8% find rate)
-Verified emails: 186 (97%+ confidence)
-Cost: $28.50
+Companies scraped: 600
+Decision-maker emails found: 342 (57.0% find rate)
+Verified confidence: 97.2% average
 
-Find rate: 35.5% (AirScale) → 64.8% (+ AnyMailFinder)
+Decision-maker breakdown:
+- Owners: 189 (55.3%)
+- CEOs: 87 (25.4%)
+- Presidents: 52 (15.2%)
+- Founders: 14 (4.1%)
 
-Sample enriched:
+Cost: $51.30 ($0.15 per email)
+
+Sample enriched leads:
 1. John Smith - Owner @ ACME HVAC (john@acmehvac.com) ✓ 98%
-2. Sarah Johnson - President @ Elite HVAC (sarah@elitehvac.com) ✓ 97%
-3. Mike Davis - CEO @ ProHVAC (mdavis@prohvac.com) ✓ 99%
+2. Sarah Johnson - CEO @ Elite HVAC (sarah@elitehvac.com) ✓ 97%
+3. Mike Davis - President @ ProHVAC (mdavis@prohvac.com) ✓ 99%
 
-📁 Updated: hvac-leads.json
+📁 Updated: hvac-inspection-leads.json
 
-Ready to write emails.
+Ready to write personalized emails using decision-maker first names.
+```
+
+## Error Handling
+
+**No website available:**
+```
+⚠️ No website for {company_name} - skipping enrichment
+```
+
+**API rate limit hit:**
+```
+⏳ Rate limit reached - waiting 10 seconds before continuing...
+```
+
+**Low find rate (<40%):**
+```
+⚠️ LOW ENRICHMENT RATE
+
+Found only {X} emails from {Y} companies (Z% find rate).
+Expected: 50-60% find rate
+
+Possible causes:
+- Many companies without professional websites
+- Industry uses personal emails (gmail, yahoo)
+- Company domains not properly extracted
+
+Recommendations:
+- Continue if {X} > 75 emails (minimum for campaign)
+- Try broader location if below minimum
+- Check that Apify scraped companies with websites
+
+Continue with {X} decision-maker emails? (yes/no)
+```
+
+**AnyMailFinder API error:**
+```
+❌ ANYMAILFINDER API ERROR
+
+Error: {error_message}
+
+Possible causes:
+- Invalid API key
+- API credits exhausted
+- AnyMailFinder service issue
+
+Check your account: https://anymailfinder.com/dashboard
+
+Retrying... (Attempt 1 of 2)
+```
+
+After 2nd failure:
+```
+❌ ENRICHMENT FAILED (2 attempts)
+
+Unable to enrich: {niche}
+
+Actions:
+1. Verify API key is valid
+2. Check AnyMailFinder credits
+3. Try again in a few minutes
+
+Continue with other niches? (yes/no)
 ```
 
 ## Cost Tracking
@@ -94,8 +254,27 @@ Ready to write emails.
 Update `mission-2-costs.json`:
 ```json
 {
-  "anymailfinder_enrichments": 186,
-  "anymailfinder_cost": 28.50,
-  "cost_per_email": 0.153
+  "anymailfinder_searches": 600,
+  "anymailfinder_emails_found": 342,
+  "anymailfinder_cost": 51.30,
+  "cost_per_email": 0.15,
+  "find_rate": "57.0%"
 }
 ```
+
+## API Documentation
+
+- AnyMailFinder Person Search: https://anymailfinder.com/docs/api/v5.0/person-search
+- Pricing: ~$0.15 per verified email found
+- Rate limit: 10 requests/second
+- Confidence threshold: 95%+ (use only "valid" status emails)
+- Plan needed: $49/month for 500 searches (covers ~300 emails found)
+
+## Notes
+
+- **Decision-maker search** finds actual person's name (not generic info@ emails)
+- First name used for email personalization: "{{firstName}}"
+- Higher quality leads (decision-makers more likely to respond)
+- 50-60% find rate is expected and acceptable
+- Both Premium and Lite paths use this (no longer Premium-only)
+- Process takes 10-15 minutes for 600 companies per niche

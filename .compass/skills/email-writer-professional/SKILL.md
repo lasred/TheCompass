@@ -32,8 +32,9 @@ Every email follows this exact structure:
 5. **Solution Tease** - Show there's a better way (2 sentences)
 6. **Social Proof** - Generic industry reference (1 sentence)
 7. **Call to Action** - Ultra casual, low pressure (1 sentence)
+8. **Signature** - Simple sign-off using sending account first name
 
-**Total length:** 120-180 words
+**Total length:** 120-180 words (excluding signature)
 
 ## Before Writing: Load Context
 
@@ -56,7 +57,7 @@ Extract:
 ## Personalization Variables
 
 For EACH lead (from Apify data):
-- `{{firstName}}` - First name
+- `{{firstName}}` - First name (decision-maker from AnyMailFinder)
 - `{{companyName}}` - Company name
 - `{{location}}` - City, State
 - `{{rating}}` - Star rating (e.g., 4.8)
@@ -69,6 +70,9 @@ From research (industry-wide, not company-specific):
 - `{{painPhrase}}` - Exact pain from research
 - `{{industryTimeWaste}}` - Industry average time waste
 - `{{problemAngle}}` - Problem being solved
+
+From Instantly (automatically populated):
+- `{{sendingAccountFirstName}}` - First name of sending account (for signature)
 
 ## PART 1: SUBJECT LINE
 
@@ -357,6 +361,30 @@ Rules:
 - ❌ NO "Schedule a demo" (too formal)
 - ❌ NO "Book a call" (too salesy)
 
+## PART 8: SIGNATURE
+
+Simple, casual sign-off using the sending account's first name.
+
+### Formula:
+```
+{{sendingAccountFirstName}}
+```
+
+**CRITICAL:** Use the variable `{{sendingAccountFirstName}}` exactly as shown. This is automatically populated by Instantly with the first name from the sending email account.
+
+Examples of what will appear:
+- If sending from john@domain.com → "John"
+- If sending from sarah@domain.com → "Sarah"
+
+Rules:
+- ✅ Use ONLY `{{sendingAccountFirstName}}` variable
+- ✅ No last name needed
+- ✅ No title, company, or contact info
+- ✅ Keep it minimal and personal
+- ❌ NO "Best regards" or "Sincerely"
+- ❌ NO company signature blocks
+- ❌ NO phone numbers or links in signature
+
 ## COMPLETE EMAIL EXAMPLES
 
 ### Example 1: Fire Inspection
@@ -378,6 +406,8 @@ What if you could cut that time by 75%? I built something specifically for Calif
 Other fire companies in California are saving 10-15 hours a week by automating their paperwork.
 
 Worth 15 minutes to see if it'd work for {{companyName}}?
+
+{{sendingAccountFirstName}}
 
 **Word count:** 120
 
@@ -403,6 +433,8 @@ Other testing companies are saving 15-20 hours a week on paperwork alone.
 
 Quick call this week to see if it fits?
 
+{{sendingAccountFirstName}}
+
 **Word count:** 118
 
 ---
@@ -426,6 +458,8 @@ What if you never missed another deadline? I built a system that automatically t
 Property managers using this stopped waking up at 3am worried about what's overdue.
 
 Worth a quick call this week to walk through it?
+
+{{sendingAccountFirstName}}
 
 **Word count:** 115
 
@@ -460,7 +494,7 @@ Before outputting ANY email:
 - [ ] Mentioned company name + location with real data
 
 ### Framework Compliance:
-- [ ] All 7 parts present
+- [ ] All 8 parts present
 - [ ] Subject line is shocking question/stat
 - [ ] Hook uses real compliment/recognition
 - [ ] Problem statement is specific to industry
@@ -468,6 +502,7 @@ Before outputting ANY email:
 - [ ] Solution tease starts with "What if"
 - [ ] Social proof is generic industry reference
 - [ ] CTA is casual and low-pressure
+- [ ] Signature uses {{sendingAccountFirstName}}
 
 ### Quality:
 - [ ] Length 120-180 words
@@ -492,6 +527,8 @@ Still curious if {{companyName}} has found a better way to handle {{problemAngle
 Most {{industry}} companies we talk to didn't realize there was a faster way until we showed them.
 
 Worth a quick call this week?
+
+{{sendingAccountFirstName}}
 ```
 
 ### Email 3 (Day 7)
@@ -508,6 +545,8 @@ If {{companyName}} isn't dealing with {{problemAngle}} anymore, great - you can 
 But if you're still {{painfulTask}}, I built something that might save your team {{industryTimeSavings}}.
 
 Let me know if you want to see it. Otherwise, I'll stop bugging you.
+
+{{sendingAccountFirstName}}
 ```
 
 ## Output Format
@@ -544,7 +583,8 @@ Save to: `user-workspace/{niche-slug}-emails.json`
         "make_it_real": true,
         "solution_tease": true,
         "social_proof": true,
-        "call_to_action": true
+        "call_to_action": true,
+        "signature": true
       },
       "data_validation": {
         "used_real_data_only": true,
