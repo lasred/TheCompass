@@ -957,17 +957,36 @@ Type "Start scraping" when ready.
 
 ## STEP 5: ENRICH EMAILS (20 minutes)
 
-I'll use AnyMailFinder to find verified **decision-maker** emails for scraped companies.
+I'll use AnyMailFinder to find verified **decision-maker** emails and full names for scraped companies.
+
+**CRITICAL:** Use AnyMailFinder for enrichment. Do NOT use Apify to enrich leads. Apify only scrapes company data from Google Maps. AnyMailFinder finds decision-maker emails and names.
+
+**AnyMailFinder Decision Maker Search API:**
+```
+Endpoint: POST https://api.anymailfinder.com/v5.0/search/decision-maker.json
+
+Required parameters:
+- domain: "companywebsite.com"
+- decision_maker_category: "ceo"
+
+Response fields:
+- email: "sam@company.com"
+- personFullName: "Samuel Khodari"  ← Use this for first name
+- personJobTitle: "Owner"
+- personLinkedinUrl: "linkedin.com/in/..."
+```
 
 **What I'll do:**
-1. Send company domains to AnyMailFinder API
-2. Search for decision-makers (Owner, CEO, President, Founder)
-3. Extract: first_name, last_name, email, title
-4. Verify email deliverability (95%+ confidence)
-5. Expected find rate: 50-60% (both Premium and Lite)
-6. Goal: ~900-1080 verified decision-maker emails from 1800 companies
+1. Extract domain from each company's website (from Apify data)
+2. Call AnyMailFinder Decision Maker Search with `decision_maker_category: "ceo"`
+3. Extract from response:
+   - `email` → verified email address
+   - `personFullName` → split to get first name for personalization
+   - `personJobTitle` → Owner, CEO, President, etc.
+4. Expected find rate: 50-60% (both Premium and Lite)
+5. Goal: ~900-1080 verified decision-maker emails from 1800 companies
 
-**Why decision-makers?** We get their actual first names (not generic info@ emails), which makes emails more personal and increases response rates.
+**Why decision-makers?** We get their actual full names (not generic info@ emails), which makes emails more personal and increases response rates.
 
 **Cost:** $49/month (pay per email found, within plan limits)
 

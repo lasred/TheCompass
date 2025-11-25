@@ -1,9 +1,11 @@
 # ANYMAILFINDER DECISION-MAKER ENRICHER SKILL
 
 ## Purpose
-Find verified decision-maker emails (CEO, Owner, President, Founder) using AnyMailFinder. Used for both Premium and Lite paths.
+Find verified decision-maker emails and full names using AnyMailFinder. Used for both Premium and Lite paths.
 
-**Key Change:** We search for **decision-makers** (not just any company email), so we get the actual person's first name, last name, email, and title.
+**CRITICAL:** Use AnyMailFinder for enrichment. Do NOT use Apify to enrich leads. Apify only scrapes company data from Google Maps. AnyMailFinder finds decision-maker emails and names.
+
+**Key Change:** We use the **Decision Maker Search** endpoint to get the actual person's full name, email, and title.
 
 ## Trigger
 - After Apify scraping completes
@@ -38,42 +40,46 @@ For each company, extract clean domain:
 
 ### Step 2: Search for Decision-Maker via AnyMailFinder API
 
-**API Endpoint:** POST https://api.anymailfinder.com/v5.0/search/person
+**API Endpoint:** POST https://api.anymailfinder.com/v5.0/search/decision-maker.json
 
 ```bash
-curl -X POST https://api.anymailfinder.com/v5.0/search/person \
+curl -X POST "https://api.anymailfinder.com/v5.0/search/decision-maker.json" \
   -H "Authorization: Bearer {API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{
     "domain": "acmehvac.com",
-    "full_name": "",
-    "job_title": "owner OR ceo OR president OR founder"
+    "decision_maker_category": "ceo"
   }'
 ```
+
+**Required Parameters:**
+- `domain`: Company website domain (e.g., "acmehvac.com")
+- `decision_maker_category`: "ceo" (finds Owner, CEO, President, Founder)
 
 **Response format:**
 ```json
 {
-  "status": "success",
   "email": "john@acmehvac.com",
-  "first_name": "John",
-  "last_name": "Smith",
-  "job_title": "Owner",
-  "confidence": 98,
-  "email_status": "valid"
+  "personFullName": "John Smith",
+  "personJobTitle": "Owner",
+  "personLinkedinUrl": "https://linkedin.com/in/johnsmith"
 }
 ```
 
-### Step 3: Filter for Decision-Makers
+**IMPORTANT Response Fields:**
+- `email` → verified email address
+- `personFullName` → full name (e.g., "Samuel Khodari") - split to get first name
+- `personJobTitle` → title (e.g., "Owner", "Chairman and CEO")
+- `personLinkedinUrl` → LinkedIn profile URL
 
-Priority order (if multiple results):
-1. **Owner** (highest priority)
-2. **CEO**
-3. **President**
-4. **Founder**
-5. **Co-Founder**
+### Step 3: Extract First Name from Full Name
 
-If multiple people with same title, pick first result.
+Split `personFullName` to get the first name for email personalization:
+- "Samuel Khodari" → first_name: "Samuel"
+- "John Smith" → first_name: "John"
+- "Mary Jane Watson" → first_name: "Mary"
+
+Use only the first word before the space.
 
 ### Step 4: Batch Processing
 
@@ -84,31 +90,38 @@ If multiple people with same title, pick first result.
 
 ### Step 5: Merge with Apify Data
 
-Combine decision-maker data with company data:
+Combine decision-maker data (from AnyMailFinder) with company data (from Apify):
 ```json
 {
   "email": "john@acmehvac.com",
   "first_name": "John",
-  "last_name": "Smith",
+  "full_name": "John Smith",
   "title": "Owner",
+  "linkedin_url": "https://linkedin.com/in/johnsmith",
   "company_name": "ACME HVAC Services",
   "website": "https://acmehvac.com",
   "location": "San Diego, CA",
   "rating": 4.8,
   "review_count": 47,
   "phone": "+1-619-555-0123",
-  "confidence": 98,
   "email_source": "anymailfinder",
   "enriched_at": "2025-11-24T10:30:00Z"
 }
 ```
 
+**Field mapping:**
+- `email` ← AnyMailFinder `email`
+- `first_name` ← First word of AnyMailFinder `personFullName`
+- `full_name` ← AnyMailFinder `personFullName`
+- `title` ← AnyMailFinder `personJobTitle`
+- `linkedin_url` ← AnyMailFinder `personLinkedinUrl`
+- `company_name`, `website`, `location`, `rating`, `review_count`, `phone` ← Apify data
+
 ### Step 6: Quality Filter
 
-- Only keep emails with **95%+ confidence**
-- Email status must be "valid" (not "catch-all" or "unknown")
 - Remove duplicates (same email address)
-- Must have first_name (required for email personalization)
+- Must have email and first_name (required for personalization)
+- Skip entries where personFullName is empty or missing
 
 ## Expected Find Rate
 
@@ -264,17 +277,30 @@ Update `mission-2-costs.json`:
 
 ## API Documentation
 
-- AnyMailFinder Person Search: https://anymailfinder.com/docs/api/v5.0/person-search
-- Pricing: ~$0.15 per verified email found
-- Rate limit: 10 requests/second
-- Confidence threshold: 95%+ (use only "valid" status emails)
-- Plan needed: $49/month for 500 searches (covers ~300 emails found)
+**Endpoint:** POST https://api.anymailfinder.com/v5.0/search/decision-maker.json
+
+**Required Parameters:**
+- `domain`: Company website domain
+- `decision_maker_category`: "ceo" (finds Owner, CEO, President, Founder)
+
+**Response Fields:**
+- `email`: Verified email address
+- `personFullName`: Full name (e.g., "Samuel Khodari")
+- `personJobTitle`: Title (e.g., "Owner", "Chairman and CEO")
+- `personLinkedinUrl`: LinkedIn profile URL
+
+**Pricing:** ~$0.15 per verified email found
+**Rate limit:** 10 requests/second
+**Plan needed:** $49/month for 500 searches
 
 ## Notes
 
-- **Decision-maker search** finds actual person's name (not generic info@ emails)
+- **CRITICAL:** Use AnyMailFinder for enrichment. Do NOT use Apify to enrich leads.
+- Apify = scrapes company data from Google Maps (company_name, website, rating, etc.)
+- AnyMailFinder = finds decision-maker email and full name
+- **Decision Maker Search** returns `personFullName` - split to get first name
 - First name used for email personalization: "{{firstName}}"
 - Higher quality leads (decision-makers more likely to respond)
 - 50-60% find rate is expected and acceptable
-- Both Premium and Lite paths use this (no longer Premium-only)
+- Both Premium and Lite paths use this
 - Process takes 10-15 minutes for 600 companies per niche
