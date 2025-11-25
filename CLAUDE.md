@@ -1456,15 +1456,17 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - `PropMgmt_Nov2025_ComplianceTracking`
 
 3. For LITE path: Verify inbox warmup via Instantly V2 API
-   - Use V2 endpoint: GET /v2/account/emails
+   - Use V2 endpoint: GET /api/v2/accounts/emails
    - Check warmup status: Active
    - Check days warming: 21+
    - If under 21 days: Block launch, show remaining days
 
 4. **For EACH campaign, execute V2 API workflow:**
 
+   **Base URL:** https://api.instantly.ai
+
    **Step A:** Create campaign with embedded 3-step sequence
-   - POST /v2/campaigns
+   - POST /api/v2/campaigns
    - Include sequences array with 3 steps (delays are RELATIVE to previous step):
      - Step 1 (Day 0): Initial email with 3 subject variants (delay: 0)
      - Step 2 (Day 3): Follow-up if no reply (delay: 3 days after Step 1)
@@ -1472,7 +1474,7 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - Returns campaign_id
 
    **Step B:** Upload leads with custom variables
-   - POST /v2/leads/add
+   - POST /api/v2/leads/add
    - Each lead includes custom_variables with:
      - email_body (personalized email using decision-maker first name)
      - subject_variant_a, subject_variant_b, subject_variant_c
@@ -1481,8 +1483,8 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
      - problemAngle (for dynamic subject lines)
 
    **Step C:** Activate campaign
-   - PATCH /v2/campaigns/{campaign_id}
-   - Set status: "active"
+   - POST /api/v2/campaigns/{campaign_id}/activate
+   - Or: PATCH /api/v2/campaigns/{campaign_id} with {"status": "active"}
    - Campaign starts sending within 1 hour
 
 5. Configure:

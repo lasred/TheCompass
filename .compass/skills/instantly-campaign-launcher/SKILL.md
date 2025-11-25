@@ -109,9 +109,17 @@ Block launch if under 21 days. Premium path skips this check (pre-warmed).
 
 ## V2 API Implementation
 
+**Base URL:** https://api.instantly.ai
+
 ### Step 1: Create Campaign with Embedded Sequences
 
-**Endpoint:** POST https://api.instantly.ai/v2/campaigns
+**Endpoint:** POST /api/v2/campaigns
+
+```bash
+curl -X POST "https://api.instantly.ai/api/v2/campaigns" \
+  -H "Authorization: Bearer {API_KEY}" \
+  -H "Content-Type: application/json"
+```
 
 **Request:**
 ```json
@@ -205,7 +213,13 @@ Block launch if under 21 days. Premium path skips this check (pre-warmed).
 
 ### Step 2: Upload Leads with Custom Variables
 
-**Endpoint:** POST https://api.instantly.ai/v2/leads/add
+**Endpoint:** POST /api/v2/leads/add
+
+```bash
+curl -X POST "https://api.instantly.ai/api/v2/leads/add" \
+  -H "Authorization: Bearer {API_KEY}" \
+  -H "Content-Type: application/json"
+```
 
 **Request:**
 ```json
@@ -248,8 +262,15 @@ Block launch if under 21 days. Premium path skips this check (pre-warmed).
 
 ### Step 3: Activate Campaign
 
-**Endpoint:** PATCH https://api.instantly.ai/v2/campaigns/{campaign_id}
+**Endpoint:** POST /api/v2/campaigns/{campaign_id}/activate
 
+```bash
+curl -X POST "https://api.instantly.ai/api/v2/campaigns/{campaign_id}/activate" \
+  -H "Authorization: Bearer {API_KEY}" \
+  -H "Content-Type: application/json"
+```
+
+**Alternative (PATCH):** PATCH /api/v2/campaigns/{campaign_id}
 ```json
 {
   "status": "active"
@@ -489,6 +510,45 @@ All campaigns launched successfully!
 Check status: "Show Mission 2 status"
 Run diagnostics (after 5+ days): "Run diagnostics"
 ```
+
+## Instantly V2 API Reference
+
+**Base URL:** https://api.instantly.ai
+**Docs:** https://developer.instantly.ai/api/v2
+
+### Campaign Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/v2/campaigns | Create campaign (with embedded sequences) |
+| GET | /api/v2/campaigns | List campaigns |
+| GET | /api/v2/campaigns/{id} | Get campaign details |
+| PATCH | /api/v2/campaigns/{id} | Update campaign |
+| POST | /api/v2/campaigns/{id}/activate | Activate (start) campaign |
+| POST | /api/v2/campaigns/{id}/pause | Pause campaign |
+| DELETE | /api/v2/campaigns/{id} | Delete campaign |
+
+### Lead Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/v2/leads/add | Add leads to campaign (bulk) |
+| POST | /api/v2/leads/move | Move leads to campaign/list |
+| GET | /api/v2/leads | List leads |
+| PATCH | /api/v2/leads/{id} | Update lead |
+| DELETE | /api/v2/leads/{id} | Delete lead |
+
+### Subsequence Endpoints (Alternative to embedded sequences)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/v2/subsequences | Create campaign subsequence |
+| GET | /api/v2/subsequences | List subsequences |
+| PATCH | /api/v2/subsequences/{id} | Update subsequence |
+| DELETE | /api/v2/subsequences/{id} | Delete subsequence |
+
+### Analytics Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v2/campaigns/{id}/analytics | Get campaign analytics |
+| GET | /api/v2/campaigns/{id}/analytics/overview | Get analytics overview |
 
 ## Notes
 
