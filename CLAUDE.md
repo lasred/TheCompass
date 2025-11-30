@@ -1493,7 +1493,7 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - Campaign starts sending within 1 hour
 
 5. Script configuration (in `instantly_campaign_launcher.py`):
-   - Timezone: America/Los_Angeles (Pacific Time)
+   - Timezone: Etc/GMT+12 (Instantly required format)
    - Sending: 25 emails/inbox/day
    - A/B testing: 3 subject variants in Step 1 (33% each)
    - Follow-ups: Day 3, Day 7 (embedded in sequence)

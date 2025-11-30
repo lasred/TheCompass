@@ -98,15 +98,15 @@ class InstantlyClient:
                             "to": "17:00"
                         },
                         "days": {
-                            "monday": True,
-                            "tuesday": True,
-                            "wednesday": True,
-                            "thursday": True,
-                            "friday": True,
-                            "saturday": False,
-                            "sunday": False
+                            "0": True,   # Monday
+                            "1": True,   # Tuesday
+                            "2": True,   # Wednesday
+                            "3": True,   # Thursday
+                            "4": True,   # Friday
+                            "5": False,  # Saturday
+                            "6": False   # Sunday
                         },
-                        "timezone": "America/Los_Angeles"  # Pacific Time
+                        "timezone": "Etc/GMT+12"  # Instantly format (confirmed working)
                     }
                 ]
             },

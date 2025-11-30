@@ -82,7 +82,7 @@ Examples:
 - Track opens: YES
 - Track clicks: YES
 - Include unsubscribe: YES (required)
-- Timezone: `America/Los_Angeles` (Pacific Time - set in script)
+- Timezone: `Etc/GMT+12` (Instantly required format - set in script)
 
 ## 3-Step Email Sequence
 
@@ -593,7 +593,7 @@ Run diagnostics (after 5+ days): "Run diagnostics"
 - **V2 API only** - Do not use V1 endpoints
 - **Sequences embedded** in campaign creation (not added separately)
 - **Custom variables** store all email content for dynamic insertion
-- **Timezone:** `America/Los_Angeles` (Pacific Time - configured in script)
+- **Timezone:** `Etc/GMT+12` (Instantly required format - configured in script)
 - **A/B testing:** 3 variants in step 1, each gets 33% traffic
 - **Delays are RELATIVE to previous step** (not cumulative from start):
   - Email 1: delay: 0 → Day 0
