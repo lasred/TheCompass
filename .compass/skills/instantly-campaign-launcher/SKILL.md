@@ -5,6 +5,43 @@ Create and launch email campaigns in Instantly with embedded 3-step sequences, A
 
 **CRITICAL:** Use Instantly V2 API only. API docs: https://developer.instantly.ai/api/v2
 
+**Script:** `.compass/scripts/instantly_campaign_launcher.py`
+
+## How to Use
+
+This skill uses the Python script at `.compass/scripts/instantly_campaign_launcher.py` to launch campaigns.
+
+### Running the Script
+
+```bash
+# Set API key first
+export INSTANTLY_API_KEY="your_api_key_here"
+
+# Run the script
+python .compass/scripts/instantly_campaign_launcher.py
+```
+
+### Programmatic Usage
+
+```python
+from instantly_campaign_launcher import InstantlyClient, launch_campaign
+
+# Initialize client
+client = InstantlyClient(api_key)
+
+# Launch campaign
+result = launch_campaign(
+    client=client,
+    niche_name="Fire",
+    problem_angle="AESForms",
+    leads_data=leads,  # From {niche}-emails.json
+    from_emails=["inbox1@domain.com", "inbox2@domain.com"]
+)
+
+print(f"Campaign ID: {result['campaign_id']}")
+print(f"Leads added: {result['leads_added']}")
+```
+
 ## Trigger
 - After email approval
 - "Launch campaigns"
@@ -45,7 +82,7 @@ Examples:
 - Track opens: YES
 - Track clicks: YES
 - Include unsubscribe: YES (required)
-- Timezone: `Etc/GMT+12` (confirmed working format)
+- Timezone: `America/Los_Angeles` (Pacific Time - set in script)
 
 ## 3-Step Email Sequence
 
@@ -552,10 +589,11 @@ Run diagnostics (after 5+ days): "Run diagnostics"
 
 ## Notes
 
+- **Script location:** `.compass/scripts/instantly_campaign_launcher.py`
 - **V2 API only** - Do not use V1 endpoints
 - **Sequences embedded** in campaign creation (not added separately)
 - **Custom variables** store all email content for dynamic insertion
-- **Timezone format:** `Etc/GMT+12` (IANA format, confirmed working)
+- **Timezone:** `America/Los_Angeles` (Pacific Time - configured in script)
 - **A/B testing:** 3 variants in step 1, each gets 33% traffic
 - **Delays are RELATIVE to previous step** (not cumulative from start):
   - Email 1: delay: 0 → Day 0
@@ -564,3 +602,4 @@ Run diagnostics (after 5+ days): "Run diagnostics"
 - **Stop on reply:** Automatically stops sequence if lead replies
 - **Campaign IDs:** Store for analytics and status checks
 - **Launch timing:** Campaigns start sending within 1 hour of activation
+- **Batch processing:** Script uploads leads in batches of 100 to avoid timeouts

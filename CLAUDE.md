@@ -1444,7 +1444,9 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 **CRITICAL:** All Instantly operations must use V2 API. API docs: https://developer.instantly.ai/api/v2
 
-1. Use `instantly-campaign-launcher` skill
+**Script:** `.compass/scripts/instantly_campaign_launcher.py`
+
+1. Use `instantly-campaign-launcher` skill which calls the Python script
 
 2. Campaign naming format:
    ```
@@ -1461,9 +1463,13 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
    - Check days warming: 21+
    - If under 21 days: Block launch, show remaining days
 
-4. **For EACH campaign, execute V2 API workflow:**
+4. **Run the campaign launcher script for EACH campaign:**
 
-   **Base URL:** https://api.instantly.ai
+   ```bash
+   python .compass/scripts/instantly_campaign_launcher.py
+   ```
+
+   The script handles the complete V2 API workflow:
 
    **Step A:** Create campaign with embedded 3-step sequence
    - POST /api/v2/campaigns
@@ -1484,16 +1490,15 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
    **Step C:** Activate campaign
    - POST /api/v2/campaigns/{campaign_id}/activate
-   - Or: PATCH /api/v2/campaigns/{campaign_id} with {"status": "active"}
    - Campaign starts sending within 1 hour
 
-5. Configure:
+5. Script configuration (in `instantly_campaign_launcher.py`):
+   - Timezone: America/Los_Angeles (Pacific Time)
    - Sending: 25 emails/inbox/day
    - A/B testing: 3 subject variants in Step 1 (33% each)
    - Follow-ups: Day 3, Day 7 (embedded in sequence)
    - Stop on reply: YES
-   - Stop on out-of-office: YES
-   - Timezone: Etc/GMT+12
+   - Batch size: 100 leads per API call
 
 6. Distribute across inboxes:
    - Campaign 1 (Niche 1): Inbox 1 + Inbox 2
@@ -1502,7 +1507,7 @@ Say: "🎉 All set! You're ready to launch Mission 2. Let's start scraping leads
 
 7. **SHOW PRE-LAUNCH CHECKLIST** (see below)
 
-8. User types "LAUNCH" → Show summary → User types "CONFIRM" → Execute
+8. User types "LAUNCH" → Show summary → User types "CONFIRM" → Execute script
 
 9. Create `mission-2-progress.md` tracking file with campaign IDs
 
