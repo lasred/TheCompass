@@ -98,15 +98,15 @@ class InstantlyClient:
                             "to": "17:00"
                         },
                         "days": {
-                            "0": True,   # Monday
-                            "1": True,   # Tuesday
-                            "2": True,   # Wednesday
-                            "3": True,   # Thursday
-                            "4": True,   # Friday
-                            "5": False,  # Saturday
-                            "6": False   # Sunday
+                            "0": False,  # Sunday - OFF
+                            "1": True,   # Monday - ON
+                            "2": True,   # Tuesday - ON
+                            "3": True,   # Wednesday - ON
+                            "4": True,   # Thursday - ON
+                            "5": True,   # Friday - ON
+                            "6": False   # Saturday - OFF
                         },
-                        "timezone": "Etc/GMT+12"  # Instantly format (confirmed working)
+                        "timezone": "America/Dawson"  # Pacific Time (Instantly accepted format)
                     }
                 ]
             },
@@ -114,9 +114,10 @@ class InstantlyClient:
                 {
                     "steps": [
                         # Email 1 - Day 0 (Initial email with A/B/C subject testing)
+                        # delay: 3 = wait 3 days AFTER this email before sending Email 2
                         {
                             "type": "email",
-                            "delay": 0,
+                            "delay": 3,
                             "variants": [
                                 {
                                     "subject": "{{subject_variant_a}}",
@@ -133,9 +134,10 @@ class InstantlyClient:
                             ]
                         },
                         # Email 2 - Day 3 (Follow-up)
+                        # delay: 4 = wait 4 days AFTER this email before sending Email 3
                         {
                             "type": "email",
-                            "delay": 3,
+                            "delay": 4,
                             "variants": [
                                 {
                                     "subject": "Re: {{subject_variant_a}}",
@@ -144,10 +146,10 @@ class InstantlyClient:
                             ]
                         },
                         # Email 3 - Day 7 (Final follow-up)
-                        # delay: 4 = 4 days after Email 2 = Day 7 total
+                        # delay: 0 = no delay after (last email in sequence)
                         {
                             "type": "email",
-                            "delay": 4,
+                            "delay": 0,
                             "variants": [
                                 {
                                     "subject": "Last note - {{problemAngle}}",
